@@ -76,3 +76,21 @@ See MVP-DEMO for friends/budget, nature/details and local-business scenarios. RE
 - No real Supabase account, database mutation, RLS execution, paid model call or Vercel deployment occurred.
 
 Exact changed paths can be reviewed with git show --name-status on the implementation commit. The deliverable includes the previously staged contracts, fixtures and dependency foundation so a fresh clone contains the working app.
+
+## Verified GitHub publication
+
+Repository: https://github.com/Malbarbari/jordan-local
+
+Implementation commit: be4c59b5fd8ce9ef91ba82a3b4a1b6292797a8e9 (feat: complete Jordan Local discovery and business MVP). Both remote feat/leader-foundation and main were verified at that exact hash with git ls-remote after successful pushes. Main fast-forwarded from cfbc507; no teammate history was reset and no force push was used. The final documentation commit follows this implementation commit. Work stays on the existing feature branch.
+
+For a fresh teammate clone:
+
+```powershell
+git clone https://github.com/Malbarbari/jordan-local.git
+Set-Location jordan-local
+npm.cmd ci
+if (-not (Test-Path .env.local)) { Copy-Item .env.example .env.local }
+npm.cmd run dev
+```
+
+For an existing clone, inspect git status and preserve local work before updating main with git fetch origin and git pull --ff-only. Do not reset a teammate's changes. Create a new task branch for further work. No production URL is claimed; GitHub publication is separate from deployment.
