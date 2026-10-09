@@ -1,0 +1,61 @@
+ROLE
+You are the backend/data engineer assisting Person 3.
+
+PROJECT CONTEXT
+Jordan Local is a four-person hackathon MVP with business publishing and AI-ranked activities. Deadline: 2026-10-10 13:00 Asia/Amman. P0 needs persistent catalogue reads, managed Auth, secure business list/create and fresh candidates. P1 features must wait.
+
+FILES TO READ
+README.md, AGENTS.md, docs/SPEC.md, docs/ARCHITECTURE.md, docs/API_CONTRACT.md, docs/TASKS.md, docs/QA.md and existing contracts/config. Inspect the repository and current Supabase setup before adding anything.
+
+TASK
+1. Author a reviewed SQL migration for profiles, businesses and activities with constraints/RLS; favorites can be added only when P1 is approved.
+2. Implement current @supabase/ssr browser/server clients, cookie refresh/proxy and verified requireUser().
+3. Implement GET /api/activities, GET /api/me, POST /api/activities and the server-side no-cache loadActivities() adapter.
+4. Prepare six initial fixture records, then a 24-record seed: eight sourced place records and sixteen visibly synthetic offers. Record exact source URLs, verification dates and image permissions. Unknown facts remain null.
+5. Prepare account-provisioning instructions for business A, business B and a visitor using consented team-controlled emails. Do not apply remote migrations or create accounts without the human's explicit approval.
+6. After P0 passes, add owner edit/archive and per-user favorites if approved.
+
+FILE OWNERSHIP
+Only supabase/**, data/**, src/lib/supabase/**, src/lib/auth/**, src/lib/data/**, src/proxy.ts, src/app/api/activities/**, src/app/api/me/**, src/app/api/favorites/**, tests/api/** and scripts/seed.ts.
+
+API CONTRACTS
+Use shared DTOs and strict Zod schemas from src/contracts.
+Implement createClient(), requireUser() and loadActivities() at the agreed paths.
+Never accept user/business ownership from mutation bodies.
+Return the exact envelopes and HTTP statuses in API_CONTRACT v1.
+Map a zero-row owner mutation to 404 rather than fake success.
+Do not change /api/recommend; coordinate with P2.
+
+TECH STACK
+Next.js Route Handlers, Node 24, TypeScript, Supabase Postgres/Auth, @supabase/ssr, Zod, Vitest.
+No ORM, custom password service, Docker prerequisite, SQLite production storage or new backend.
+
+CONSTRAINTS
+Use the verified per-request user and normal Supabase client so RLS runs.
+No runtime service-role key.
+Activities update policies need both USING and WITH CHECK ownership validation, plus SELECT policy.
+Protect administrative provenance/verification fields against direct Supabase REST mutations using SQL grants/triggers as appropriate.
+Demo business offers must stay synthetic; users cannot declare themselves verified.
+Validate currency units, null/free distinction, durations, months, capacity, allowed locations and safe URLs. Avoid fetching arbitrary remote image URLs server-side.
+Read current published records on every recommendation. Seed JSON is initialization, not another silent live store.
+In explicit seed fallback, return read-only data and reject every write/private route with the agreed error.
+
+ACCEPTANCE CRITERIA
+Create persists after reload; unauthenticated and cross-owner writes fail; direct RLS tests also fail correctly.
+A created valid record appears in loadActivities() immediately.
+Seed records distinguish places, real offers if actually sourced, and synthetic offers without fabricated providers/prices/reviews.
+No duplicate favorites or invalid activity references in P1.
+
+TESTING REQUIREMENTS
+Unit/API validation tests; real Supabase tests with business A, business B, visitor and anonymous identities when provisioned.
+Test direct client insert/update attempts, including owner/provenance reassignment.
+For an RLS-filtered update verify zero changed rows and unchanged data, not only the absence of an exception.
+Run lint/typecheck/build and document which tests used a real DB.
+Propose SQL and commands for the human to review before shared execution.
+
+FILES THAT MUST NOT BE MODIFIED
+package/lock/config except your explicitly owned src/proxy.ts; src/contracts/**; recommender routes/modules; UI; P1-owned docs. Provide required README text in your report for P1 to apply.
+
+EXPECTED REPORT
+Short plan, exact files, schema/RLS rationale, seed provenance summary, tested identities and results, remote actions still requiring human execution, limitations, integration notes and suggested PR title. Do not commit/push/merge/deploy.
+
