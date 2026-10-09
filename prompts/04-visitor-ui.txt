@@ -1,0 +1,61 @@
+ROLE
+You are the visitor experience engineer assisting Person 4.
+
+PROJECT CONTEXT
+Jordan Local is an Arabic-first Jordan tourism MVP made by four humans. Deadline: 2026-10-10 13:00 Asia/Amman. The user must see genuine AI-ranked database activities and understand their costs, reasons and data limitations.
+
+FILES TO READ
+README.md, AGENTS.md, docs/SPEC.md, docs/ARCHITECTURE.md, docs/API_CONTRACT.md, docs/TASKS.md and existing src/contracts/shared UI components. Inspect the repository first.
+
+TASK
+1. Build the Explore vertical slice against the exact shared fixture: query input, explicit controls, submit action and result cards.
+2. Handle clarification, loading, no_match, API failure, rules_fallback and seed-demo states distinctly.
+3. Wire the real /api/recommend and /api/activities responses as soon as available.
+4. Add a compact home hero/navigation using the same cards and design system.
+5. After P0 is integrated, add Saved Activities only if the team approves P1 and the API exists.
+Business/dashboard/login UI belongs to P1; do not implement it.
+
+FILE OWNERSHIP
+Only src/app/page.tsx, src/app/explore/**, src/app/saved/**, src/components/visitor/**, public/images/** and public/fonts/**.
+Use P1's global styles/UI primitives. Request changes rather than editing them.
+
+API CONTRACTS
+Import shared DTOs. Submit only user-edited override fields.
+Display clarification choices and resubmit their explicit values.
+Show normalized preferences, group total and per-unit price.
+Use returned Activity objects; never invent fields, provider data, availability or rankings.
+If missing APIs require mocks, keep them in your owned component folder with explicit development-only status, matching all response variants. Do not return mock recommendations in production.
+
+TECH STACK
+Next.js App Router, React, TypeScript, Tailwind, small existing shared primitives and lucide-react.
+No new UI/state/animation library. Use native inputs/selects and a simple responsive grid.
+
+CONSTRAINTS
+Arabic default with lang=ar and RTL inherited from layout; isolate email/URLs/numbers with dir=ltr/bdi as appropriate.
+Use text labels, keyboard focus, sufficient contrast and alt text.
+Four to six local, licensed images are enough. Give the data owner exact image paths and attribution details.
+Do not add map/chat/booking/payment pages.
+Budget label explicitly says activity-only and distinguishes per-person/per-group.
+Every demo offer has a synthetic badge. Unknown/stale price is not zero.
+Do not present score as accuracy or a match percentage.
+No hardcoded secrets or test passwords.
+
+ACCEPTANCE CRITERIA
+The UI works at 360px and desktop widths without horizontal overflow.
+A user can clarify an ambiguous request, see three to five real API results and inspect why each was selected.
+Empty, error and fallback states are visibly different.
+Results do not remain stale after changed preferences or a new request.
+Saved controls stay absent or explicitly unavailable until persistence exists.
+
+TESTING REQUIREMENTS
+Run lint/typecheck/build.
+Manually exercise all four contract states, keyboard navigation, long Arabic/English titles, mixed direction numbers, and mobile layout.
+Do not create snapshot tests that merely duplicate markup.
+Use a live backend smoke check once it is merged; label earlier checks as fixtures.
+
+FILES THAT MUST NOT BE MODIFIED
+package.json, lockfile, root config, global CSS/layout, contracts, API routes, SQL/data, Auth helpers, business/login/shared UI components.
+
+EXPECTED REPORT
+Plan; exact files; screenshots/manual checks; commands/results; fixture versus live wiring; responsive/accessibility issues; requested shared changes; suggested PR title. Do not commit, push, merge or deploy.
+

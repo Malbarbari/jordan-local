@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "request_id": "00000000-0000-4000-8000-000000000102",
+  "status": "ok",
+  "engine": "hybrid_llm",
+  "data_mode": "supabase",
+  "dataset_version": "illustrative-fixture-not-live-output",
+  "preferences": {
+    "locale": "ar",
+    "budget_fils": 40000,
+    "budget_scope": "per_group",
+    "budget_basis": "activity_only",
+    "party_size": 4,
+    "origin_location_id": null,
+    "destination_location_ids": [
+      "ajloun"
+    ],
+    "max_straight_line_km": null,
+    "group_type": "friends",
+    "interests": [
+      "nature",
+      "adventure"
+    ],
+    "environments": [],
+    "max_duration_minutes": null,
+    "month": 10,
+    "requested_date": null
+  },
+  "questions": [],
+  "recommendations": [
+    {
+      "activity_id": "00000000-0000-4000-8000-000000000001",
+      "activity": {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "business_id": "00000000-0000-4000-8000-000000000010",
+        "record_kind": "offer",
+        "title_ar": "تجربة طبيعة جماعية — عرض تجريبي",
+        "title_en": "Group nature experience — demo offer",
+        "description_ar": "عرض افتراضي لاختبار الطبيعة والمغامرة، وليس خدمة متاحة للحجز.",
+        "description_en": "Fictional nature and adventure test offer; not bookable.",
+        "location_id": "ajloun",
+        "category": "nature",
+        "tags": [
+          "nature",
+          "adventure"
+        ],
+        "environment": [
+          "forest"
+        ],
+        "group_types": [
+          "friends"
+        ],
+        "family_friendly": false,
+        "price_fils": 8000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-09T13:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "Synthetic activity-only price; transport and meals excluded.",
+        "duration_minutes": 120,
+        "capacity_people": 8,
+        "available_months": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11
+        ],
+        "image_path": null,
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-09T13:00:00Z",
+        "updated_at": "2026-10-09T13:00:00Z"
+      },
+      "total_cost_fils": 32000,
+      "distance_km": null,
+      "reason_codes": [
+        "INTEREST_MATCH",
+        "GROUP_MATCH",
+        "WITHIN_BUDGET"
+      ],
+      "reasons": [
+        "مطابق لتصنيف الطبيعة والمغامرة في العرض التجريبي.",
+        "مناسب للأصدقاء حسب بيانات العرض.",
+        "السعر التجريبي 32 دينارًا للمجموعة المكوّنة من أربعة أشخاص."
+      ],
+      "scores": {
+        "semantic": 90,
+        "deterministic": 72,
+        "final": 83.7
+      }
+    }
+  ],
+  "candidate_count": 1,
+  "unconfirmed_count": 0,
+  "warnings": [
+    "Synthetic contract fixture, not a measured API response.",
+    "هذا عرض افتراضي غير متاح للحجز؛ التوافر غير متحقق منه."
+  ]
+}
