@@ -1,0 +1,268 @@
+[
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000001",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "nature",
+        "adventure",
+        "hiking"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000002",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "adventure",
+        "nature",
+        "hiking"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000003",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "food",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000004",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "cultural",
+        "historical"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000005",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "historical",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000006",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "cultural",
+        "historical"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000007",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "adventure",
+        "nature",
+        "scenic"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000008",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "nature",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000009",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "nature",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000010",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "adventure",
+        "nature",
+        "hiking"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000011",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "historical",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000012",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "nature",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000013",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "food",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000014",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "nature",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000015",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "food",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "10000000-0000-4000-8000-000000000016",
+    "metadata": {
+      "listing_kind": "activity",
+      "discovery_tags": [
+        "cultural",
+        "historical"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "30000000-0000-4000-8000-000000000001",
+    "metadata": {
+      "listing_kind": "destination",
+      "discovery_tags": [
+        "historical",
+        "scenic",
+        "cultural",
+        "nature"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "30000000-0000-4000-8000-000000000002",
+    "metadata": {
+      "listing_kind": "destination",
+      "discovery_tags": [
+        "historical",
+        "scenic",
+        "cultural"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "30000000-0000-4000-8000-000000000003",
+    "metadata": {
+      "listing_kind": "visitable_place",
+      "discovery_tags": [
+        "farms",
+        "pools",
+        "swimming",
+        "family",
+        "wellness"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  },
+  {
+    "activity_id": "30000000-0000-4000-8000-000000000004",
+    "metadata": {
+      "listing_kind": "accommodation",
+      "discovery_tags": [
+        "cabins",
+        "wellness",
+        "scenic",
+        "couples"
+      ],
+      "estimated_price_fils": 60000,
+      "estimated_price_unit": "per_group"
+    }
+  },
+  {
+    "activity_id": "30000000-0000-4000-8000-000000000005",
+    "metadata": {
+      "listing_kind": "business_offer",
+      "discovery_tags": [
+        "camps",
+        "scenic",
+        "local_tours",
+        "adventure"
+      ],
+      "estimated_price_fils": null,
+      "estimated_price_unit": null
+    }
+  }
+]

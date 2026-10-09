@@ -1,0 +1,37 @@
+import { z } from "zod";
+export const LocaleSchema = z.enum(["ar", "en"]);
+export const LocationIdSchema = z.enum(["amman", "irbid", "ajloun", "jerash", "umm-qais", "as-salt", "madaba", "dana", "wadi-rum"]);
+export const CategorySchema = z.enum(["nature", "culture", "food", "adventure", "heritage"]);
+export const GroupTypeSchema = z.enum(["family", "friends", "couple", "solo"]);
+export const EnvironmentSchema = z.enum(["forest", "desert", "urban", "countryside"]);
+export const ReasonCodeSchema = z.enum(["INTEREST_MATCH", "GROUP_MATCH", "WITHIN_BUDGET", "NEARBY", "DURATION_FIT", "SEASON_FIT"]);
+const money = z.number().int().min(0).max(2147483647), stamp = z.iso.datetime({ offset: true }), month = z.number().int().min(1).max(12);
+export const PreferencesSchema = z.strictObject({ locale: LocaleSchema, budget_fils: money.max(10000000).nullable(), budget_scope: z.enum(["per_group", "per_person"]).nullable(), budget_basis: z.enum(["activity_only", "whole_trip", "unclear"]), party_size: z.number().int().min(1).max(30).nullable(), origin_location_id: LocationIdSchema.nullable(), destination_location_ids: z.array(LocationIdSchema), max_straight_line_km: z.number().positive().max(500).nullable(), group_type: GroupTypeSchema.nullable(), interests: z.array(CategorySchema), environments: z.array(EnvironmentSchema), max_duration_minutes: z.number().int().min(1).max(1440).nullable(), month: month.nullable(), requested_date: z.iso.date().nullable() });
+export const RecommendRequestSchema = z.strictObject({ schema_version: z.literal(1), locale: LocaleSchema, query: z.string().max(1000), overrides: PreferencesSchema.partial() });
+const editable = { title_ar: z.string().trim().min(1).max(200), title_en: z.string().max(200).nullable().optional(), description_ar: z.string().trim().min(1).max(4000), description_en: z.string().max(4000).nullable().optional(), location_id: LocationIdSchema, category: CategorySchema, tags: z.array(CategorySchema), environment: z.array(EnvironmentSchema), group_types: z.array(GroupTypeSchema), family_friendly: z.boolean().nullable(), price_fils: money.nullable(), price_unit: z.enum(["per_person", "per_group", "free", "unknown"]), price_valid_until: stamp.nullable(), price_notes: z.string().max(2000), duration_minutes: z.number().int().min(1).max(1440).nullable(), capacity_people: z.number().int().min(1).max(2147483647).nullable(), available_months: z.array(month).nullable(), image_path: z.string().regex(/^\/images\/[a-zA-Z0-9/_-]+\.(jpg|jpeg|png|webp|avif|svg)$/).nullable() };
+function validPrice(v: {
+    price_unit: string;
+    price_fils: number | null;
+}) { return v.price_unit === "unknown" ? v.price_fils === null : v.price_unit === "free" ? v.price_fils === 0 : v.price_fils !== null && v.price_fils > 0; }
+const priceError = { path: ["price_fils"], message: "Unknown requires no price; free requires zero; paid units require a positive price." };
+export const CreateActivitySchema = z.strictObject(editable).refine(validPrice, priceError);
+export const ActivitySchema = z.strictObject({ ...editable, title_en: z.string().max(200).nullable(), description_en: z.string().max(4000).nullable(), id: z.uuid(), business_id: z.uuid().nullable(), record_kind: z.enum(["place", "offer"]), price_status: z.enum(["unknown", "source_checked", "owner_declared", "synthetic_demo"]), price_checked_at: stamp.nullable(), source_url: z.url().nullable(), location_source_url: z.url().nullable(), data_kind: z.enum(["public_source", "provider_submitted", "synthetic_demo"]), verification_status: z.enum(["source_checked", "owner_declared", "unverified"]), source_checked_at: stamp.nullable(), status: z.enum(["published", "archived"]), created_at: stamp, updated_at: stamp }).refine(validPrice, priceError);
+export const RecommendationSchema = z.strictObject({ activity_id: z.uuid(), activity: ActivitySchema, total_cost_fils: z.number().int().nonnegative().nullable(), distance_km: z.number().nonnegative().nullable(), reason_codes: z.array(ReasonCodeSchema), reasons: z.array(z.string()), scores: z.strictObject({ semantic: z.number().finite().nullable(), deterministic: z.number().finite(), final: z.number().finite() }) }).refine(v => v.activity_id === v.activity.id, { path: ["activity_id"], message: "Hydrated ID must match" });
+export const RecommendResponseSchema = z.strictObject({ schema_version: z.literal(1), request_id: z.uuid(), status: z.enum(["ok", "clarification", "no_match", "degraded"]), engine: z.enum(["hybrid_llm", "rules_fallback", "none"]), data_mode: z.enum(["supabase", "seed"]), dataset_version: z.string().min(1), preferences: PreferencesSchema, questions: z.array(z.strictObject({ key: z.string(), prompt: z.string(), choices: z.array(z.string()) })), recommendations: z.array(RecommendationSchema), candidate_count: z.number().int().nonnegative(), unconfirmed_count: z.number().int().nonnegative(), warnings: z.array(z.string()) }).refine(v => !["clarification", "no_match"].includes(v.status) || v.recommendations.length === 0, { path: ["recommendations"], message: "Empty results required for this state" });
+export const MeResponseSchema = z.strictObject({ data: z.strictObject({ user_id: z.uuid(), role: z.enum(["visitor", "business"]), business_id: z.uuid().nullable(), locale: LocaleSchema }) });
+export const ActivitiesResponseSchema = z.strictObject({ data: z.array(ActivitySchema), meta: z.strictObject({ count: z.number().int().nonnegative() }) });
+export const CreateActivityResponseSchema = z.strictObject({ data: ActivitySchema });
+export const ErrorResponseSchema = z.strictObject({ error: z.strictObject({ code: z.string(), message: z.string(), fields: z.record(z.string(), z.string()).optional(), request_id: z.uuid() }) });
+export type Locale = z.infer<typeof LocaleSchema>;
+export type LocationId = z.infer<typeof LocationIdSchema>;
+export type Category = z.infer<typeof CategorySchema>;
+export type GroupType = z.infer<typeof GroupTypeSchema>;
+export type Environment = z.infer<typeof EnvironmentSchema>;
+export type ReasonCode = z.infer<typeof ReasonCodeSchema>;
+export type Preferences = z.infer<typeof PreferencesSchema>;
+export type RecommendRequest = z.infer<typeof RecommendRequestSchema>;
+export type Activity = z.infer<typeof ActivitySchema>;
+export type Recommendation = z.infer<typeof RecommendationSchema>;
+export type RecommendResponse = z.infer<typeof RecommendResponseSchema>;
+export type CreateActivity = z.infer<typeof CreateActivitySchema>;
+export type MeResponse = z.infer<typeof MeResponseSchema>;

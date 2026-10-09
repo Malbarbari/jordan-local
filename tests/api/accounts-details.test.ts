@@ -1,0 +1,14 @@
+import { beforeEach,it,expect,vi } from "vitest";
+import { GET as account,PATCH as profile } from "../../src/app/api/account/route";
+import { POST as business } from "../../src/app/api/business/profile/route";
+import { GET as favorites,POST as favorite } from "../../src/app/api/favorites/route";
+import { GET as listing } from "../../src/app/api/listings/[id]/route";
+import { GET as details } from "../../src/app/api/listing-details/route";
+const origin="http://localhost:3000";
+beforeEach(()=>{vi.stubEnv("DATA_MODE","seed");vi.stubEnv("APP_ORIGIN",origin);});
+function req(path:string,input:unknown,method="POST",site=origin){return new Request(origin+path,{method,headers:{Origin:site,"Content-Type":"application/json"},body:JSON.stringify(input)});}
+it("public listing lookup returns actual source data, related IDs and conditional prices",async()=>{const response=await listing(new Request(origin),{params:Promise.resolve({id:"60000000-0000-4000-8000-000000000001"})});expect(response.status).toBe(200);const {data}=await response.json();expect(data.listing.activity.business_id).toBeNull();expect(data.details.quotes.filter((q:{optional:boolean})=>!q.optional).length).toBe(6);expect(data.related.every((r:{activity:{id:string;location_id:string}})=>r.activity.id!==data.listing.activity.id&&r.activity.location_id==="petra")).toBe(true);});
+it.each(["not-an-id","99999999-9999-4999-8999-999999999999"])("invalid/unavailable listing %s returns a real 404",async id=>{expect((await listing(new Request(origin),{params:Promise.resolve({id})})).status).toBe(404);});
+it("seed mode never pretends to create accounts, providers or persisted favorites",async()=>{expect((await account()).status).toBe(503);expect((await profile(req("/api/account",{display_name:"زائر",account_type:"business"},"PATCH"))).status).toBe(503);expect((await favorites()).status).toBe(503);expect((await favorite(req("/api/favorites",{listing_id:crypto.randomUUID()}))).status).toBe(503);expect((await business(req("/api/business/profile",{name:"منشأة محلية",description:"وصف تجربة محلية واقعية",location_id:"irbid",category:"طبيعة",phone:null,whatsapp:null,website:null,social_url:null}))).status).toBe(503);});
+it("rejects cross-origin mutation and forged ownership before authentication",async()=>{expect((await profile(req("/api/account",{display_name:"زائر",account_type:"traveler"},"PATCH","https://bad.example"))).status).toBe(403);expect((await profile(req("/api/account",{display_name:"زائر",account_type:"traveler",user_id:crypto.randomUUID()},"PATCH"))).status).toBe(400);});
+it("does not substitute curated details for a failed production database",async()=>{vi.stubEnv("DATA_MODE","supabase");vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL","");vi.stubEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY","");expect((await details()).status).toBe(503);});

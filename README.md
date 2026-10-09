@@ -1,64 +1,55 @@
-# Jordan Local — AI Quest 2026
-Arabic-first discovery of Jordanian activities, with database-grounded AI ranking.
+# Jordan Local
 
-> STATUS: This repository kit contains specifications and agent instructions, not an implemented app. Replace this status with verified implementation details before submission. Do not claim tests, deployment, users, partnerships, or bookings that have not happened.
+Arabic RTL tourism discovery across Jordan, with local providers at the center. Built in this existing Next.js repository for AI Quest 2026.
 
-## Product
-A visitor describes an outing; the system clarifies ambiguous constraints, filters published listings, uses an LLM to score semantic fit, and returns validated database activities with evidence-based reasons. A signed-in business can create a listing that is considered on the next request.
+## Run the working demo
 
-P0: Explore, natural-language recommendations, explicit filters, managed login with provisioned demo accounts, business list/create, provenance labels, deployed demo.
-P1: Business edit/archive, Favorites, persistent preferences, self-service signup.
-P2: Booking, payments, conversational chat, community submissions, live maps, popularity, history.
+Use Node 24 and the committed lockfile.
 
-## Stack
-Node.js 24 LTS, current stable Next.js App Router, React, TypeScript, Tailwind CSS, Supabase Postgres/Auth, OpenAI Responses API, Zod, Vitest, Vercel.
-The leader installs dependencies once and commits package-lock.json. Everyone else uses npm ci.
-Default model: gpt-4.1-mini-2025-04-14. Verify access with one real request immediately.
+```powershell
+npm.cmd ci
+if (-not (Test-Path .env.local)) { Copy-Item .env.example .env.local }
+npm.cmd run dev
+```
 
-## Setup — after the scaffold and feature PRs exist
-~~~powershell
-git clone https://github.com/YOUR_USERNAME/jordan-local.git
-Set-Location jordan-local
-npm ci
-Copy-Item .env.example .env.local
-code .env.local
-npm run dev
-~~~
-Open http://localhost:3000. Never commit .env.local or demo passwords.
+Open http://localhost:3000. The default seed/rules mode requires no credentials or paid calls.
 
-The backend owner applies supabase/migrations/001_init.sql through the Supabase SQL Editor once, provisions three consented test accounts through the Auth dashboard (business A, business B, visitor), inserts their profiles/business ownership rows, and applies the reviewed seed SQL generated from data/activities.seed.json. Record the SQL files and exact steps in this README. Do not install Docker or introduce a migration platform during the event.
+- Browse 32 source-backed destinations, places, activities and stays, with 18 licensed local photos including a two-photo Wadi Rum gallery.
+- Open dedicated listing pages for visitor-specific published prices, room/night calculators, photos, sharing, related places and source-linked directions where coordinates exist.
+- Use the original recommendation planner for strict group budgets, clarification and deterministic fallback. Its API v1 and fixtures remain unchanged.
+- At /signup, choose traveler or business. Without credentials, explicitly start the separate local demo: fictional profiles, listings and favorites are saved only in this browser. /business/manage supports create, edit and removal in that demo. The original /business temporary-preview form is preserved.
+- With Supabase configured, signup, email confirmation, login, profiles, favorites and owned listing publishing use Auth/PostgreSQL. No real Auth or DB configuration has been applied by this implementation.
 
-## Environment
-See .env.example. NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY are public configuration; RLS is mandatory. OPENAI_API_KEY is server-only. Do not configure a service-role key in the running app. Use the Supabase dashboard for provisioning.
+## Setup and team continuation
 
-## Scripts to establish
-~~~powershell
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm start
-~~~
-The first scaffold may have no tests: record that honestly. The AI owner adds npm run eval:ai through a dependency/script request to the leader; it performs real, opt-in API evaluations and writes a measured report. CI tests use mocked model outputs and no external secrets.
+Read [setup and live verification](docs/MVP-SETUP.md), [team handoff](TEAM_HANDOFF.md), [three demo scenarios](docs/MVP-DEMO.md), and [final delivery report](docs/FINAL-DELIVERY.md). The [API contract](docs/API_CONTRACT.md) is frozen. Older delivery/planning notes describe earlier snapshots; the final report and handoff take precedence for current implementation status.
 
-## Security and data
-Ownership comes from a verified Supabase identity and businesses.owner_id, not a form-supplied user ID or editable metadata. Prices use integer fils: 1 JOD = 1000 fils.
-Synthetic offers are visibly labelled. Real places do not imply real offers or verified prices. No live availability, booking, travel-time, review, or economic-impact claims.
+Supabase: review/apply migrations 001 → 002 → 003 → 004 in order, then original seeds, seed_tourism.sql and seed_details.sql. Never reset an existing database. Configure Auth Site URL and the exact /auth/callback redirect. The server uses the signed-in user's publishable-key client and RLS, never a service-role runtime key.
 
-## Delivery
-- Live URL: TO BE VERIFIED
-- GitHub commit/tag: TO BE VERIFIED
-- Demo credentials: shared privately with judges, never in this file
-- Implemented: TO BE VERIFIED
-- Simulated/synthetic: TO BE VERIFIED
-- Tests and known limitations: TO BE VERIFIED
+Environment placeholders: [.env.example](.env.example). Keep .env.local private. DATA_MODE=supabase enables persistence after setup. AI_MODE=hybrid plus ALLOW_PAID_AI=true and a server-only OpenAI key require explicit approval for paid usage. Otherwise the Responses integration uses deterministic fallback. No paid requests or Vercel deployment were performed.
 
-## Reading order
-AGENTS.md → docs/SPEC.md → docs/ARCHITECTURE.md → docs/API_CONTRACT.md → docs/TASKS.md.
-Then read docs/AI_DESIGN.md, docs/POWERSHELL.md, docs/QA.md, and docs/DEMO-PITCH.md.
+## Validation
 
-## Fallback
-DATA_MODE=seed gives read-only catalogue access from the versioned seed. Login-dependent features and writes are disabled; the UI must say "Read-only demo". AI can still rank the seed.
-AI_MODE=rules explicitly disables LLM calls and labels results as deterministic fallback. It is not presented as live AI.
-Local npm start still needs internet in the primary architecture. A recording is the only fully offline backup; label it as recorded.
+```powershell
+npm.cmd run lint
+npx.cmd tsc --noEmit
+npm.cmd test
+npm.cmd run build
+npm.cmd start
+```
 
+Optional installed-Chrome checks: scripts/browser-smoke.mjs, browser-premium.mjs and browser-final.mjs. They use an isolated debugging browser and seed/rules app on port 3100; screenshots are ignored under .qa-artifacts/. Mocked Supabase tests establish route scoping, not live RLS. See the setup checklist before enabling production writes.
+
+## Price and product boundaries
+
+All money uses integer fils: 1 JOD = 1000 fils. Conditional admission prices are separate from strict v1 activity budgets; residency/citizenship and unknown capacity cannot be guessed. Published prices are dated snapshots, not live availability. Five commercial estimates are explicitly fictional, seed-only planning examples and excluded from production SQL. Unspecified billing periods never become nightly prices or zero-cost items.
+
+Full-geography /api/tourism remains deterministic discovery. The opt-in Responses AI runs only through the existing nine-location /api/recommend contract. Newly published eligible v1 business offers join fresh discovery and recommendations. A full-geography AI endpoint is a follow-up requiring a reviewed contract extension.
+
+No booking, payments, general chatbot, fabricated reviews/analytics, provider partnerships or fake uploads. Listing images may use an owner-supplied HTTPS link with rights confirmation; Storage upload is a follow-up. Public landmarks never receive private ownership.
+
+## Stack and ownership
+
+Next.js App Router, TypeScript, Tailwind CSS, Supabase Auth/PostgreSQL, OpenAI Responses API, Zod and Vitest. CI runs Node 24. No new dependency was added for the final feature set.
+
+P1 owns contracts/shared shell/docs, P2 AI/ranking, P3 Auth/data/RLS, P4 visitor UI. The user explicitly authorized the integrated lead work and final GitHub delivery; preserve teammate commits and develop on separate task branches. See AGENTS.md and TEAM_HANDOFF.md.

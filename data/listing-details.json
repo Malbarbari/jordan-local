@@ -1,0 +1,824 @@
+{
+  "60000000-0000-4000-8000-000000000001": {
+    "highlights": [
+      "الخزنة والواجهات المنحوتة في الصخر",
+      "تراث نبطي ومسارات مشي داخل الموقع"
+    ],
+    "practical": [
+      "احمل الماء وارتدِ حذاءً مناسبًا للمشي.",
+      "السكن في وادي موسى، وليس داخل متنزه البترا.",
+      "التذكرة النهارية لا تشمل البترا ليلًا."
+    ],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 1000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "إثبات الهوية مطلوب؛ رسوم الدخول فقط."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "resident",
+        "label_ar": "دخول المقيمين",
+        "currency": "JOD",
+        "amount_fils": 10000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "resident",
+        "conditions": [
+          "بطاقة إقامة سارية مضى على إصدارها سنة على الأقل."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "arab",
+        "label_ar": "دخول الزوار العرب",
+        "currency": "JOD",
+        "amount_fils": 30000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "arab",
+        "conditions": [
+          "حسب فئة الزائر وإثبات الهوية لدى شباك التذاكر."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "overnight",
+        "label_ar": "زائر دولي مع إقامة · يوم واحد",
+        "currency": "JOD",
+        "amount_fils": 50000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "international_overnight",
+        "conditions": [
+          "الإقامة ليلة واحدة على الأقل في الأردن؛ أحضر جواز السفر."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "day",
+        "label_ar": "زائر دولي دون إقامة",
+        "currency": "JOD",
+        "amount_fils": 90000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "international_day",
+        "conditions": [
+          "للزائر غير المقيم لليلة في الأردن."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "child",
+        "label_ar": "طفل دون 12 سنة",
+        "currency": "JOD",
+        "amount_fils": 0,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "child_under_12",
+        "conditions": [
+          "تذكرة الدخول النهارية فقط؛ اختر عدد الأطفال لهذه الحسبة."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "transfer",
+        "label_ar": "نقل 4×4 · القرية الثقافية إلى مسار الدير",
+        "currency": "JOD",
+        "amount_fils": 5000,
+        "unit": "per_person",
+        "status": "source_checked",
+        "audience": "everyone",
+        "conditions": [
+          "رحلة باتجاه واحد فقط؛ تحقق من التشغيل مع الموقع."
+        ],
+        "source_url": "https://www.visitpetra.jo/en/Petrafees",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": true
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000002": {
+    "highlights": [
+      "المسرح الأثري والواجهات البازلتية",
+      "موقع جدارا التاريخي في شمال الأردن"
+    ],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 5000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000003": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 3000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000004": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 500,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 10000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000005": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [
+      {
+        "path": "/images/tourism/wadi-rum-camels.jpg",
+        "title": "Wadi Rum 01",
+        "alt_ar": "ركوب الجمال بين تشكيلات وادي رم",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_01.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Wadi_Rum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Wadi_Rum_01.jpg/960px-Wadi_Rum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license.",
+        "checked_at": "2026-10-09T21:53:47.313Z"
+      }
+    ],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000006": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000007": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000008": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000009": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 2000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000010": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 2000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000011": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000012": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000013": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "demo",
+        "label_ar": "كوخ · مثال إقامة تجريبي",
+        "currency": "JOD",
+        "amount_fils": 85000,
+        "unit": "per_night",
+        "status": "demo_estimate",
+        "audience": "everyone",
+        "conditions": [
+          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
+          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
+        ],
+        "source_url": null,
+        "checked_at": null,
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000014": {
+    "highlights": [
+      "أكواخ في متنزه بيئي بالأغوار الشمالية",
+      "خيارات إقامة مزدوجة وثلاثية وعائلية وفق وصف المزود"
+    ],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "double",
+        "label_ar": "كوخ مزدوج قياسي",
+        "currency": "JOD",
+        "amount_fils": 45000,
+        "unit": "unspecified",
+        "status": "source_checked",
+        "audience": "everyone",
+        "conditions": [
+          "يشمل ضريبة 16%.",
+          "الفترة الزمنية غير محددة في المصدر؛ تأكد من المزود قبل حساب الليالي."
+        ],
+        "source_url": "https://jordanecopark.com/accommodation",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000015": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "demo",
+        "label_ar": "وجبة · مثال تجريبي",
+        "currency": "JOD",
+        "amount_fils": 12000,
+        "unit": "per_person",
+        "status": "demo_estimate",
+        "audience": "everyone",
+        "conditions": [
+          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
+          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
+        ],
+        "source_url": null,
+        "checked_at": null,
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000016": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000017": {
+    "highlights": [
+      "مسار مائي بين جدران الوادي",
+      "المدة المنشورة للمسار 2–3 ساعات"
+    ],
+    "practical": [
+      "تأكد من فتح المسار وملاءمة الطقس مع المحمية قبل الانطلاق.",
+      "مسار مائي؛ راجع متطلبات العمر واللياقة ومعدات السلامة مباشرة مع المشغّل."
+    ],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "مسار السيق · أردني",
+        "currency": "JOD",
+        "amount_fils": 17000,
+        "unit": "per_person",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "شامل الضريبة. مسار ذاتي الإرشاد؛ تأكد من التشغيل والطقس قبل الزيارة."
+        ],
+        "source_url": "https://www.rscn.org.jo/uploaded_files/reservation/Mujib%2520Biosphere%2520Reserve%2520Trails%25202026.pdf",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "resident",
+        "label_ar": "مسار السيق · مقيم",
+        "currency": "JOD",
+        "amount_fils": 21000,
+        "unit": "per_person",
+        "status": "source_checked",
+        "audience": "resident",
+        "conditions": [
+          "شامل الضريبة. راجع إثبات الإقامة المطلوب مع المحمية."
+        ],
+        "source_url": "https://www.rscn.org.jo/uploaded_files/reservation/Mujib%2520Biosphere%2520Reserve%2520Trails%25202026.pdf",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "مسار السيق · غير أردني",
+        "currency": "JOD",
+        "amount_fils": 23000,
+        "unit": "per_person",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "شامل الضريبة. السعر لهذا المسار، وليس دخول جميع مسارات المحمية."
+        ],
+        "source_url": "https://www.rscn.org.jo/uploaded_files/reservation/Mujib%2520Biosphere%2520Reserve%2520Trails%25202026.pdf",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000018": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000019": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000020": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000021": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 3000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000022": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000023": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 3000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000024": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 2000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000025": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "jordanian",
+        "label_ar": "دخول الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 250,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "jordanian",
+        "conditions": [
+          "رسوم الدخول حسب فئة الزائر. لا تشمل النقل أو الطعام."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      },
+      {
+        "id": "foreign",
+        "label_ar": "دخول غير الأردنيين",
+        "currency": "JOD",
+        "amount_fils": 1000,
+        "unit": "per_ticket",
+        "status": "source_checked",
+        "audience": "non_jordanian",
+        "conditions": [
+          "راجع أهلية التخفيضات وإثبات الهوية قبل الشراء."
+        ],
+        "source_url": "https://www.ticket.gov.jo/ar/prices",
+        "checked_at": "2026-10-10T00:00:00+03:00",
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000026": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "demo",
+        "label_ar": "تجربة مزرعة · مثال تجريبي",
+        "currency": "JOD",
+        "amount_fils": 25000,
+        "unit": "per_person",
+        "status": "demo_estimate",
+        "audience": "everyone",
+        "conditions": [
+          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
+          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
+        ],
+        "source_url": null,
+        "checked_at": null,
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000027": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000028": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000029": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000030": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000031": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "demo",
+        "label_ar": "تخييم · مثال تجريبي",
+        "currency": "JOD",
+        "amount_fils": 35000,
+        "unit": "per_person",
+        "status": "demo_estimate",
+        "audience": "everyone",
+        "conditions": [
+          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
+          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
+        ],
+        "source_url": null,
+        "checked_at": null,
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  },
+  "60000000-0000-4000-8000-000000000032": {
+    "highlights": [],
+    "practical": [],
+    "quotes": [
+      {
+        "id": "demo",
+        "label_ar": "غرفة · مثال إقامة تجريبي",
+        "currency": "JOD",
+        "amount_fils": 140000,
+        "unit": "per_night",
+        "status": "demo_estimate",
+        "audience": "everyone",
+        "conditions": [
+          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
+          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
+        ],
+        "source_url": null,
+        "checked_at": null,
+        "optional": false
+      }
+    ],
+    "gallery": [],
+    "image_url": null,
+    "image_rights_confirmed": false
+  }
+}

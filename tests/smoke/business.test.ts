@@ -1,0 +1,13 @@
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { sharedSyntheticFixture } from "../../src/contracts/fixtures";
+const storage = new Map<string, string>();
+beforeEach(() => { vi.resetModules(); storage.clear(); vi.stubGlobal("sessionStorage", { getItem: (key: string) => storage.get(key) ?? null, setItem: (key: string, value: string) => storage.set(key, value) }); });
+async function client(demo: boolean) { vi.stubEnv("NEXT_PUBLIC_UI_DEMO", String(demo)); return import("../../src/components/business/client"); }
+function input() { const { title_ar, title_en, description_ar, description_en, location_id, category, tags, environment, group_types, family_friendly, price_fils, price_unit, price_valid_until, price_notes, duration_minutes, capacity_people, available_months, image_path } = sharedSyntheticFixture; return { title_ar, title_en, description_ar, description_en, location_id, category, tags, environment, group_types, family_friendly, price_fils, price_unit, price_valid_until, price_notes, duration_minutes, capacity_people, available_months, image_path }; }
+describe("business integration boundaries", () => {
+    it("blocks demo access without its explicit session", async () => { const api = await client(true); await expect(api.listOwn()).rejects.toMatchObject({ status: 401 }); await expect(api.createListing(input())).rejects.toMatchObject({ status: 401 }); });
+    it("creates a synthetic row and refreshes the own list", async () => { const api = await client(true); api.beginDemo(); const row = await api.createListing(input()); expect(row.data_kind).toBe("synthetic_demo"); expect((await api.listOwn()).map(row => row.id)).toContain(row.id); });
+    it("never substitutes demo data for unauthorized real API responses", async () => { const api = await client(false); vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify({ error: { code: "UNAUTHENTICATED", message: "Login required", request_id: "00000000-0000-4000-8000-000000000101" } }), { status: 401 }))); await expect(api.getMe()).rejects.toMatchObject({ status: 401 }); });
+    it("surfaces server field errors", async () => { const api = await client(false); vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify({ error: { code: "VALIDATION_ERROR", message: "Invalid listing", fields: { title_ar: "Required" }, request_id: "00000000-0000-4000-8000-000000000101" } }), { status: 422 }))); await expect(api.createListing(input())).rejects.toMatchObject({ fields: { title_ar: "Required" } }); });
+    it("fails closed when the managed Auth client is missing", async () => { const api = await client(false); await expect(api.signIn("test@example.invalid", "unused")).rejects.toMatchObject({ status: 503 }); });
+});

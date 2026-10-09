@@ -1,5 +1,19 @@
 # Agent working agreement
 
+## Current human-approved implementation scope
+Latest final-build authorization also covers additive accounts/profiles/favorites,
+listing detail/pricing modules, migration 004 and business management. The lead owns
+integration of those new paths for this task. The user explicitly authorized a verified
+commit/push and safe merge or PR to the existing remote. No paid API, database application,
+deployment or destructive Git action is authorized by that permission.
+
+The user has authorized the lead engineer to complete the integrated MVP across visitor,
+AI, backend, database SQL, business and shared paths in this existing branch. The original
+four-person ownership table remains the historical team plan. For this task the lead owns
+new integration helpers in src/lib/http.ts and src/lib/runtime.ts, scripts/browser-smoke.mjs,
+and docs/MVP-*.md. Preserve staged work; no autonomous parallel agents, paid API calls,
+remote Git mutations, database application or deployment without explicit authorization.
+
 ## Before implementation
 1. Read README.md and docs/SPEC.md, ARCHITECTURE.md, API_CONTRACT.md, TASKS.md.
 2. Inspect the existing repository and git status. Do not assume a file, API, test, or dependency exists.
@@ -39,3 +53,13 @@ Owned scope implemented; request/response schemas unchanged; loading/empty/error
 ## Final agent report
 Summary; exact files changed; tests/commands and observed results; what was mocked versus live; known limitations; contract/dependency requests; manual verification steps; suggested PR title. Leave Git mutations to the human.
 
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

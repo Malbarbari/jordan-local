@@ -1,4 +1,5 @@
 # Sources and evidence boundaries
+Current application/data results are in [FINAL-DELIVERY](FINAL-DELIVERY.md), [REAL-DATA-SOURCES](REAL-DATA-SOURCES.md) and [TEAM_HANDOFF](../TEAM_HANDOFF.md). The sections below record the original planning kit and its historical evidence boundaries.
 Checked: 2026-10-09. Competition dates, judging criteria and team constraints are taken from the supplied "Pasted text.txt"; no independent verification of organizer rules is claimed.
 
 ## Official technical sources

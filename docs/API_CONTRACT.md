@@ -244,3 +244,9 @@ Never accept user_id from this body. Use the verified actor, and show only curre
 
 ## Complete JSON fixture
 See [examples/recommend-success.json](examples/recommend-success.json) for a complete serializable success response. Its scores and data are synthetic contract examples, not observed model output.
+
+## Implemented shared exports
+Schemas and inferred DTOs: src/contracts/index.ts. All four synthetic response states: src/contracts/fixtures.ts and docs/examples/recommend-*.json. Shared UI props and integration details are frozen in docs/LEADER-HANDOFF.md. No wire shape changes.
+
+## Integrated MVP runtime notes
+The wire contract remains v1. The current no-credential default is seed/rules mode; private endpoints still return 503 DEMO_READ_ONLY. A client-only business form preview is labelled temporary and never submitted as a seed mutation or included in server recommendations. Primary publishing uses verified Supabase users and fresh database reads. Paid model calls require DATA_MODE=supabase, AI_MODE=hybrid, ALLOW_PAID_AI=true and a server-only key. Unsupported hard distances produce clarification rather than an invented estimate. See docs/MVP-SETUP.md for current behavior and limitations.

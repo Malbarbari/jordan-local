@@ -1,0 +1,5 @@
+import { requireUser } from "@/lib/auth/server";
+import { ProfileInputSchema } from "@/contracts/accounts";
+import { body,failure,HttpError,json,requireSameOrigin } from "@/lib/http";
+export async function GET(){try{const {id,client}=await requireUser();const [p,b]=await Promise.all([client.from("profiles").select("display_name,account_type").eq("user_id",id).maybeSingle(),client.from("businesses").select("id,name").eq("owner_id",id).maybeSingle()]);if(p.error||b.error)throw new HttpError(503,"ACCOUNT_UNAVAILABLE","تعذّر تحميل الحساب. راجع إعداد قاعدة البيانات.");return json({data:{user_id:id,profile:p.data,business:b.data}});}catch(e){return failure(e);}}
+export async function PATCH(request:Request){try{requireSameOrigin(request);const input=await body(request,ProfileInputSchema);const {id,client}=await requireUser();const {error}=await client.from("profiles").upsert({user_id:id,...input});if(error)throw new HttpError(503,"PROFILE_FAILED","لم يُحفظ الملف الشخصي.");return json({data:input});}catch(e){return failure(e);}}

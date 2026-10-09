@@ -1,0 +1,5 @@
+import { requireUser } from "@/lib/auth/server";
+import { BusinessInputSchema } from "@/contracts/accounts";
+import { body,failure,HttpError,json,requireSameOrigin } from "@/lib/http";
+export async function GET(){try{const {id,client}=await requireUser();const {data,error}=await client.from("businesses").select("id,name,description,location_id,category,phone,whatsapp,website,social_url").eq("owner_id",id).maybeSingle();if(error)throw new HttpError(503,"PROFILE_FAILED","تعذّر تحميل ملف المنشأة.");return json({data});}catch(e){return failure(e);}}
+export async function POST(request:Request){try{requireSameOrigin(request);const input=await body(request,BusinessInputSchema);const {client}=await requireUser();const {data,error}=await client.rpc("onboard_business",{p_name:input.name,p_description:input.description,p_location:input.location_id,p_category:input.category,p_phone:input.phone,p_whatsapp:input.whatsapp,p_website:input.website,p_social:input.social_url});if(error||!data)throw new HttpError(503,"PROFILE_FAILED","لم يُحفظ ملف المنشأة. راجع migration 004.");return json({data:{id:data,...input}});}catch(e){return failure(e);}}

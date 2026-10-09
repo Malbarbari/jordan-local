@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "request_id": "00000000-0000-4000-8000-000000000102",
+  "status": "clarification",
+  "engine": "none",
+  "data_mode": "supabase",
+  "dataset_version": "illustrative-fixture-not-live-output",
+  "preferences": {
+    "locale": "ar",
+    "budget_fils": 40000,
+    "budget_scope": null,
+    "budget_basis": "activity_only",
+    "party_size": 4,
+    "origin_location_id": null,
+    "destination_location_ids": [
+      "ajloun"
+    ],
+    "max_straight_line_km": null,
+    "group_type": "friends",
+    "interests": [
+      "nature",
+      "adventure"
+    ],
+    "environments": [],
+    "max_duration_minutes": null,
+    "month": 10,
+    "requested_date": null
+  },
+  "questions": [
+    {
+      "key": "budget_scope",
+      "prompt": "Is the budget for the whole group or per person?",
+      "choices": [
+        "per_group",
+        "per_person"
+      ]
+    }
+  ],
+  "recommendations": [],
+  "candidate_count": 0,
+  "unconfirmed_count": 0,
+  "warnings": [
+    "Synthetic contract fixture, not a measured API response.",
+    "هذا عرض افتراضي غير متاح للحجز؛ التوافر غير متحقق منه."
+  ]
+}
