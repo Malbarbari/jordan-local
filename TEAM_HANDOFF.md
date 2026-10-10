@@ -48,7 +48,7 @@ Local lint/typecheck/build, real local route tests and mocked owner/Auth/DB test
 
 ## Git workflow
 
-Use the existing GitHub repo (Malbarbari/jordan-local). Fetch and inspect remote main before each task; do not reset/force-push. Make a separate branch per teammate, use npm ci, preserve frozen schemas/fixture expectations and coordinate changes through PRs. Exact final publication branch/hash is recorded in FINAL-DELIVERY after remote verification. Do not commit .env.local, passwords, screenshots, build output or caches.
+Use the existing GitHub repo (Malbarbari/jordan-local). Fetch and inspect remote main before each task; do not reset/force-push. Make a separate branch per teammate, use npm ci, preserve frozen schemas/fixture expectations and coordinate changes through PRs. The verified marketplace implementation and CI are recorded in FINAL-DELIVERY; git log -1 origin/main identifies the latest delivery commit. Do not commit .env.local, passwords, screenshots, build output or caches.
 
 ## Marketplace extension and team entry points
 

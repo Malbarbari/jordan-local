@@ -66,3 +66,5 @@ Real Supabase Auth/PostgreSQL/RLS and live paid Responses calls still require cr
 ## Publication
 
 Repository: [Malbarbari/jordan-local](https://github.com/Malbarbari/jordan-local). Work remains on feat/leader-foundation; publication uses a normal fast-forward to main only when remote ancestry permits it; protection/conflicts require a reviewed PR. The final handoff response records the exact commit and remote verification. Never force-push, reset teammate changes or bypass branch protection.
+
+Verified marketplace implementation commit: `ec11f42eea7e63b62c5745f6f964e4f99fb5ff84`, published to main and feat/leader-foundation by normal fast-forward. [Node 24 CI](https://github.com/Malbarbari/jordan-local/actions/runs/38022825586) passed checkout, npm ci, lint, typecheck, all tests and build on that exact implementation. Subsequent handoff/navigation corrections are published normally; `git log -1 origin/main` identifies the final delivery commit. No remaining merge step was required for that publication.
