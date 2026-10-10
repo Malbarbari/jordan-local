@@ -47,3 +47,9 @@ Keep ALLOW_PAID_AI=false until explicitly approving charges. The default gpt-4.1
 Import the existing GitHub repository; Node 24, Next.js defaults, npm ci and npm run build. Configure the exact origin and Supabase public values, keep server-only keys out of NEXT_PUBLIC variables, set Auth redirects, and perform live acceptance checks. DATA_MODE/other settings require a rebuild. Paid AI should remain disabled until approved and verified. No deployment has been performed.
 
 See README, TEAM_HANDOFF, FINAL-DELIVERY and MVP-DEMO for current scope. Earlier setup/delivery snapshots do not describe the new account features.
+
+### Marketplace import
+
+After migration 004, review/apply `005_directory_geography.sql`, then `seed_marketplace.sql` after the existing tourism/detail seeds. It adds unclaimed provider identities and real advertised offers with stable IDs and no conflict overwrite. The directory profile descriptions are maintained in the validated `data/marketplace.json`. Never grant ownership by matching names.
+
+`node scripts/marketplace-seed.mjs` regenerates SQL without a database connection. `seed_marketplace_demo.sql` is optional for an isolated demo database only; it adds clearly fictional businesses/offers, never real contact data. Production requires no fictional seed. Do not reset an existing database. Validate with separate business A/B accounts: listing/profile edits must fail across owners and neither may edit an unclaimed researched profile.

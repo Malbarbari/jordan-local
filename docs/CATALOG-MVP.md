@@ -57,3 +57,9 @@ Business submission uses the original POST to create an owned base record, then 
 - Reviewed catalogue import/editor, provider self-service onboarding, moderation workflow and independent safety verification.
 - A separate explicit unconfirmed-discovery response tier for destinations with missing hard facts, rather than weakening v1's eligible recommendation guarantees.
 - Live Supabase RLS/privacy checks and approved Responses evaluation. These require configured services; no live or paid calls were made.
+
+## Additive business marketplace
+
+`GET /api/businesses` returns `{data:[{provider,profile,listings}],meta:{data_mode}}`, grouped only from published tourism listings. `GET /api/businesses/{uuid}` returns `{data:{provider,profile,listings}}` or the existing error envelope/404. Directory profiles are independent, sourced and unclaimed; no public API grants ownership. `GET /api/listings/{uuid}` hydrates the same actual offer ID, keyed details and related entries. Marketplace price details may add min_people/max_people/requires_confirmation; restricted group prices never produce a total outside their conditions.
+
+All existing `/api/recommend`, `/api/activities` DTOs, envelopes and fixtures remain unchanged. Eligible nine-city marketplace offers enter the original activity loader; full-geography/nights/unknown capacity retain additive discovery without false budget eligibility. Default seed mode also contains explicitly fictional providers/offers. Browser-created demo offers appear only in a separately labeled rules overlay, never in model candidates or a fabricated server response.

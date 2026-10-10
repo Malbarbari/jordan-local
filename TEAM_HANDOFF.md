@@ -4,7 +4,7 @@ Current source of truth: README, docs/MVP-SETUP.md, docs/FINAL-DELIVERY.md and d
 
 ## Run and verify
 
-Node 24; npm.cmd ci; copy .env.example only if .env.local is absent; npm.cmd run dev. Default seed/rules mode works without credentials. Run npm.cmd run lint, npx.cmd tsc --noEmit, npm.cmd test, npm.cmd run build. Three optional Chrome suites use local port 3100/debugging 9225 and ignored .qa-artifacts screenshots.
+Node 24; npm.cmd ci; copy .env.example only if .env.local is absent; npm.cmd run dev. Default seed/rules mode works without credentials. Run npm.cmd run lint, npx.cmd tsc --noEmit, npm.cmd test, npm.cmd run build. Four optional Chrome suites use local port 3100/debugging 9225 and ignored .qa-artifacts screenshots.
 
 ## Modules and team ownership
 
@@ -12,7 +12,7 @@ Node 24; npm.cmd ci; copy .env.example only if .env.local is absent; npm.cmd run
 | --- | --- | --- |
 | P1 contracts/shared integration | src/contracts/index.ts, catalog.ts, tourism.ts, accounts.ts, listing-details.ts; layout/global CSS; docs/CI | Keep v1 strict schemas and fixtures unchanged. New accounts/details are additive. |
 | P2 AI | src/lib/recommendation/ai.ts, service.ts, preferences.ts, constraints.ts, discovery.ts; /api/recommend; tests/ai | Eligible IDs only; no model prices; deterministic group arithmetic and fallback. Paid gating remains explicit. |
-| P3 data/Auth | src/lib/data/*, auth/*, supabase/*; /api/account, activities, favorites, business/profile, businesses, listings, listing-details; migration 004 | Verified server identity plus RLS; never trust client owner IDs or use a service-role runtime key. |
+| P3 data/Auth | src/lib/data/*, auth/*, supabase/*; /api/account, activities, favorites, business/profile, businesses, listings, listing-details; migrations 004–005 | Verified server identity plus RLS; never trust client owner IDs or use a service-role runtime key. |
 | P4 visitor/account UI | visitor/*, account/*; signup/account/saved/listings/businesses pages; public/images | Arabic RTL, accessibility/states, provenance/price/category disclosure, accurate licensed media. |
 | P1/P3 business UI | business/manager.tsx, dashboard.tsx, profile page | Load details before editing; preserve unexposed fields; archive with confirmation; partial-save retry uses existing ID. |
 
@@ -24,11 +24,11 @@ GET /api/tourism → additive full-geography filter schema → loadTourism (cura
 
 ## Prices and listing details
 
-src/contracts/listing-details.ts: JOD/fils, units person/group/ticket/night/unspecified, audience, conditions, source/check time, status and media evidence. data/listing-details.json is the single seed dataset, exposed through /api/listing-details and hydrated /api/listings/{id}. Legacy quick-view demo prices derive from it. scripts/details-seed.mjs generates seed_details.sql and excludes every demo estimate. Do not run --create when maintaining hand-edited detail data: that deliberately regenerates the reviewed initial snapshot; plain execution only regenerates SQL.
+src/contracts/listing-details.ts: JOD/fils, units person/group/ticket/night/unspecified, audience, conditions, source/check time, status and media evidence. data/listing-details.json plus data/marketplace.json are the seed detail datasets, exposed through /api/listing-details and hydrated /api/listings/{id}. Legacy quick-view demo prices derive only from fictional marketplace offers. scripts/details-seed.mjs generates seed_details.sql and excludes every demo estimate. Do not run --create when maintaining hand-edited detail data: that deliberately regenerates the reviewed initial snapshot; plain execution only regenerates SQL.
 
 src/lib/tourism/cost.ts is pure. Unknown/unspecified/invalid counts produce no total, not zero. Nightly costs multiply chosen room count and nights without guessing room capacity. Conditional fees never become a universally valid v1 base price. Strict budget/capacity rules remain unchanged. Details can omit prices rather than importing unvalidated DB JSON or switching data mode silently.
 
-Sourced quotes cover nine government ticket locations, Petra visitor categories, Mujib Siq and EcoPark. Five commercial demo estimates are explicitly fictional. Real providers are unclaimed, source-linked identities, not partners or authenticated owners. Missing photo/safety/season/capacity facts are never invented.
+Sourced quotes cover nine government ticket locations, Petra visitor categories, Mujib Siq and EcoPark. Fictional prices now belong exclusively to five fictional businesses, with three offers each in data/marketplace.json. No fictional quotes remain on real businesses. Real providers are unclaimed, source-linked identities, not partners or authenticated owners. Missing photo/safety/season/capacity facts are never invented.
 
 ## Accounts and business ownership
 
@@ -49,3 +49,14 @@ Local lint/typecheck/build, real local route tests and mocked owner/Auth/DB test
 ## Git workflow
 
 Use the existing GitHub repo (Malbarbari/jordan-local). Fetch and inspect remote main before each task; do not reset/force-push. Make a separate branch per teammate, use npm ci, preserve frozen schemas/fixture expectations and coordinate changes through PRs. Exact final publication branch/hash is recorded in FINAL-DELIVERY after remote verification. Do not commit .env.local, passwords, screenshots, build output or caches.
+
+## Marketplace extension and team entry points
+
+- `data/marketplace.json` / `src/contracts/marketplace.ts`: 11 sourced unclaimed providers, five fictional providers, eight sourced plus 15 fictional offers, keyed details. Existing real catalog stays intact. Full-geography cities and nightly/conditional prices remain additive.
+- `src/lib/data/marketplace.ts`, `activities.ts`, `catalog.ts`, `tourism.ts`, `details.ts`: shared IDs/data feeding discovery, profiles, calculators and eligible v1 recommendations. Do not rewrite P2 ranking or filters to add listings.
+- `/api/businesses` groups published offers; `/api/businesses/[id]` projects independent directory data or an actual public owner profile. Authenticated ownership routes never accept these public identities as claims.
+- `src/lib/tourism/local-recommendations.ts`: explicit browser-only fixture overlay using existing `eligibility`/`candidate`; does not mutate server response or feed user-provided records to AI.
+- Migration 005 expands provider geography only. Run `node scripts/marketplace-seed.mjs`, review real seed after migrations/existing seeds. Optional demo seed is isolated from production. Both use stable IDs and conflict DO NOTHING.
+- `tests/api/marketplace.test.ts`: IDs/relationships, price provenance, conditional group totals, strict budget/capacity/archive eligibility, public lookup and deterministic SQL generation.
+
+Real Supabase Auth/RLS and paid Responses checks still require credentials, manual DB setup and approved usage. Existing mocked ownership tests and browser demo do not establish live database policy correctness.

@@ -60,7 +60,7 @@ await wait("[...document.querySelectorAll('.tourism-section .experience-art img'
 assert.ok(await evaluate("document.querySelector('.tourism-section').textContent.includes('Wikimedia Commons')"));
 await set("tourism-location", "ajloun"); await set("tourism-kind", "accommodation"); await set("tourism-query", "بدي اكواخ في الطبيعة");
 await evaluate("document.querySelector('.tourism-form').requestSubmit()");
-await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 1 && !document.querySelector('.tourism-section [aria-busy=true]')");
+await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 2 && !document.querySelector('.tourism-section [aria-busy=true]')");
 assert.ok(await evaluate("document.querySelector('.tourism-section').textContent.includes('أكواخ محمية عجلون')"));
 await set("tourism-budget", "40");
 await evaluate("document.querySelector('.tourism-form').requestSubmit()");
@@ -70,14 +70,14 @@ await evaluate("[...document.querySelectorAll('.tourism-form button')].find(butt
 await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 6");
 await set("tourism-location", "petra");
 await evaluate("document.querySelector('.tourism-form').requestSubmit()");
-await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 2");
+await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 3");
 assert.ok(await evaluate("document.querySelector('.tourism-section').textContent.includes('البتراء الصغيرة')"));
 console.log("PASS real tourism: licensed local photos and attribution, Arabic preferences, actual geography, unknown-price exclusion");
 await set("catalog-kind", "destination");
 await wait("document.querySelectorAll('.catalogue-section .experience-card').length === 2");
 assert.ok(await evaluate("[...document.querySelectorAll('.catalogue-section .experience-card')].every(card => card.textContent.includes('ليست ملكية خاصة') && card.textContent.includes('السعر غير معروف') && card.querySelector('a[href*=visitjordan]'))"));
 await set("catalog-kind", "accommodation");
-await wait("document.querySelectorAll('.catalogue-section .experience-card').length === 1");
+await wait("document.querySelectorAll('.catalogue-section .experience-card').length === 3");
 assert.ok(await evaluate("document.querySelector('.catalogue-section').textContent.includes('تقدير المجموعة: 60')"));
 await set("catalog-kind", "visitable_place"); await set("catalog-tag", "swimming");
 await wait("document.querySelectorAll('.catalogue-section .experience-card').length === 1");

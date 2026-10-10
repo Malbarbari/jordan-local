@@ -1,4 +1,11 @@
 @import "tailwindcss";
+
+.provider-cover { position:relative; height:clamp(220px,32vw,430px); border-radius:24px; overflow:hidden; background:#173d35; }
+.provider-cover img { object-fit:cover; }
+.business-card .provider-featured { color:var(--green,#173d35); font-weight:600; margin:14px 0 8px; }
+.business-card .button { margin-top:14px; width:100%; }
+.business-directory .search-controls { margin-bottom:24px; }
+.business-card small[lang=en] { display:block; text-align:right; color:#716e65; }
 /* Premium discovery layer: local photographs, original category art, RTL. */
 /* Jordan Local: sandstone, olive and warm paper. No remote fonts or images. */
 :root {--background:#f7f6f1;--foreground:#203c35;--accent:#185f4d;--muted:#53655e;--border:#c7d2cb;--danger:#a12424;}

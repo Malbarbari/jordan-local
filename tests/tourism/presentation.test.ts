@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import seed from "../../data/tourism.real.json";
+import marketplace from "../../data/marketplace.json";
+const seed=marketplace.listings;
 import { TourismListingSchema } from "@/contracts/tourism";
 import { DemoPricesSchema, demoEstimate, demoPrices as prices } from "@/components/visitor/tourism-presentation";
 import { groupCost } from "@/lib/recommendation/constraints";
@@ -15,8 +16,8 @@ describe("frontend demo pricing boundary",()=>{
   }
  });
  it("never exposes a demo estimate in live mode or overrides declared prices",()=>{
-  const row=TourismListingSchema.parse(seed.find(row=>row.activity.id.endsWith("013")));
-  expect(demoEstimate(row,false)).toBeNull();expect(demoEstimate(row,true)?.amount_fils).toBe(85000);
+  const row=TourismListingSchema.parse(seed.find(row=>row.activity.id.endsWith("105")));
+  expect(demoEstimate(row,false)).toBeNull();expect(demoEstimate(row,true)?.amount_fils).toBe(65000);
   expect(demoEstimate({...row,activity:{...row.activity,price_unit:"per_group",price_fils:99000}},true)).toBeNull();
  });
  it("rejects fractional money and missing disclosure",()=>{

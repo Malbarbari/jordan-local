@@ -4,7 +4,8 @@ import { ActivitySchema, type Activity } from "@/contracts";
 import { createClient } from "@/lib/supabase/server";
 import { dataMode } from "@/lib/runtime";
 import { HttpError } from "@/lib/http";
-export const seedActivities: Activity[] = [...seed, ...tourism].map(value => ActivitySchema.parse(value));
+import { marketplaceActivities } from "./marketplace";
+export const seedActivities: Activity[] = [...seed, ...tourism, ...marketplaceActivities].map(value => ActivitySchema.parse(value));
 export async function loadActivities(): Promise<Activity[]> {
     if (dataMode() === "seed")
         return seedActivities.filter(row => row.status === "published");

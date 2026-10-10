@@ -4,7 +4,7 @@ export function declaredCost(activity:{price_fils:number|null;price_unit:string}
  return activity.price_fils*(activity.price_unit==="per_person"?people:1);
 }
 export function quoteCost(quote:Quote,people:number,nights:number,rooms:number):number|null {
- if(![people,nights,rooms].every(v=>Number.isInteger(v)&&v>=1&&v<=30) || quote.unit==="unspecified") return null;
+ if(![people,nights,rooms].every(v=>Number.isInteger(v)&&v>=1&&v<=30) || quote.unit==="unspecified" || quote.requires_confirmation || (quote.min_people!==undefined && people<quote.min_people) || (quote.max_people!==undefined && people>quote.max_people)) return null;
  const value=quote.amount_fils*(quote.unit==="per_night"?nights*rooms:quote.unit==="per_person"||quote.unit==="per_ticket"?people:1);
  return Number.isSafeInteger(value)?value:null;
 }

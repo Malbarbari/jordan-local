@@ -1,4 +1,6 @@
 "use client";
+import {useAccount} from "@/components/account/context";
+import {localRecommendations} from "@/lib/tourism/local-recommendations";
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowUpLeft, Sparkles, SlidersHorizontal, LoaderCircle, Users, Wallet, MapPin } from "lucide-react";
@@ -9,11 +11,12 @@ import { jodToFils } from "@/components/business/form";
 import { ActivityCard, categoryLabels } from "./activity-card";
 import { Button, Input } from "@/components/ui";
 const samples = [
-    { name: "طبيعة مع الأصدقاء", city: "ajloun", group: "friends", party: "4", budget: "40", interests: ["nature", "adventure"] as Category[], query: "نريد طلعة طبيعة هادئة مع وقت للتصوير." },
+    { name: "طبيعة مع الأصدقاء", city: "ajloun", group: "friends", party: "4", budget: "80", interests: ["nature", "adventure"] as Category[], query: "نريد طلعة طبيعة هادئة مع وقت للتصوير." },
     { name: "فن ونكهات مع العائلة", city: "amman", group: "family", party: "4", budget: "30", interests: ["culture", "food"] as Category[], query: "نبحث عن تجربة خفيفة للعائلة تجمع الفن والنكهات." },
     { name: "غروب في الصحراء", city: "wadi-rum", group: "friends", party: "6", budget: "40", interests: ["adventure", "nature"] as Category[], query: "نريد نشاطًا جماعيًا في أجواء الصحراء." }
 ];
 export default function Explorer() {
+    const account=useAccount();
     const [catalogue, setCatalogue] = useState<CatalogEntry[]>([]), [catalogueError, setCatalogueError] = useState(""), [catalogueLoading, setCatalogueLoading] = useState(true);
     const [kind, setKind] = useState(""), [tag, setTag] = useState(""), [metadataAvailable, setMetadataAvailable] = useState(true);
     const [city, setCity] = useState("ajloun"), [group, setGroup] = useState("friends"), [party, setParty] = useState("4"), [budget, setBudget] = useState("40"), [query, setQuery] = useState(""), [interests, setInterests] = useState<Category[]>(["nature", "adventure"]);
@@ -81,6 +84,7 @@ export default function Explorer() {
    <div className="sample-row"><span>جرّب مثالًا:</span>{samples.map((value, index) => <button type="button" key={value.name} onClick={() => sample(index)} disabled={pending}>{value.name}</button>)}</div>
    {error && <div role="alert" className="notice error">{error} <Link href="/login">تسجيل الدخول</Link></div>}
   </section>
+  {result && result.status!=="clarification" && account.demo && <section className="card local-demo-recommendations"><h2>خيارات مشروعك في هذا المتصفح</h2><p className="detail-note">توصيات قواعد محلية للنموذج التجريبي، منفصلة عن رد الخادم. لا تمثل ذكاءً اصطناعيًا أو حفظًا في قاعدة البيانات.</p><div className="experience-grid">{localRecommendations(account.demo.listings,result.preferences,new Date()).map(({entry,recommendation})=><ActivityCard key={entry.activity.id} activity={entry.activity} recommendation={recommendation} entry={entry} party={result.preferences.party_size??1}/>)}</div></section>}
   <div ref={resultsRef} className="results-anchor" aria-live="polite" aria-busy={pending}>
    {pending && <div className="loading-state"><LoaderCircle className="spin" size={28}/><h2>نراجع الأنشطة وميزانية مجموعتك…</h2><p>نستخدم الأنشطة المؤهلة فقط.</p></div>}
    {result && <>

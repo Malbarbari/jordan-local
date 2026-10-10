@@ -1,3 +1,4 @@
+import { marketplaceActivities } from "@/lib/data/marketplace";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { CatalogEntrySchema, CatalogResponseSchema, defaultMetadata } from "../../src/contracts/catalog";
 import { sharedSyntheticFixture } from "../../src/contracts/fixtures";
@@ -18,7 +19,7 @@ describe("additive tourism catalogue", () => {
     it("serves all five kinds, sourced public landmarks, fictional providers and honest estimates", async () => {
         const response = await GET(); expect(response.status).toBe(200);
         const body = CatalogResponseSchema.parse(await response.json());
-        expect(body.meta.count).toBe(21);
+        expect(body.meta.count).toBe(21 + marketplaceActivities.length);
         expect(new Set(body.data.map(e => e.metadata.listing_kind)).size).toBe(5);
         for (const entry of body.data.filter(e => e.metadata.listing_kind === "destination")) {
             expect(entry.provider).toBeNull(); expect(entry.activity.business_id).toBeNull(); expect(entry.activity.price_unit).toBe("unknown"); expect(entry.activity.source_url).toContain("visitjordan.com");

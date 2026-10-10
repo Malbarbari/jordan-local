@@ -39,7 +39,7 @@ export async function recommend(request: RecommendRequest, activities: Activity[
     const catalogVersion = JSON.stringify(Array.from(options?.catalog ?? new Map<string, CatalogMetadata>()).sort(([a], [b]) => a.localeCompare(b)));
     const base = { schema_version: 1 as const, request_id: crypto.randomUUID(), data_mode: dataMode(), dataset_version: createHash("sha256").update(activities.map(a => a.id + ":" + a.updated_at).sort().join("|")).update(catalogVersion).digest("hex").slice(0, 16), preferences, questions: questionsFor(preferences, request.query, request.overrides), recommendations: [] as Recommendation[], candidate_count: 0, unconfirmed_count: 0, warnings };
     if (dataMode() === "seed")
-        warnings.push("عرض تجريبي للقراءة فقط: العروض التجارية افتراضية. الوجهات العامة تستند إلى المصادر المرتبطة، دون تأكيد أسعار أو توافر.");
+        warnings.push("وضع بيانات تجريبي للقراءة فقط: العروض الافتراضية موسومة بوضوح؛ المعلومات الحقيقية تستند إلى المصادر المرتبطة. لا نؤكد التوافر أو السعة غير المنشورة.");
     warnings.push("الميزانية للنشاط فقط. تواصل مع المزود لتأكيد السعر والتوافر.");
     if (base.questions.length)
         return RecommendResponseSchema.parse({ ...base, status: "clarification", engine: "none" });

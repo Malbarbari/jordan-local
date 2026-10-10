@@ -3,6 +3,7 @@ import { CatalogEntrySchema, CatalogMetadataSchema, PublicProviderSchema, defaul
 import type { Activity } from "@/contracts";
 import { dataMode } from "@/lib/runtime";
 import { createClient } from "@/lib/supabase/server";
+import { marketplace } from "./marketplace";
 
 export async function enrichCatalog(activities: Activity[]): Promise<{ entries: CatalogEntry[]; available: boolean }> {
     const metadata = new Map<string, unknown>();
@@ -10,6 +11,8 @@ export async function enrichCatalog(activities: Activity[]): Promise<{ entries: 
     let available = true;
     if (dataMode() === "seed") {
         for (const row of seedMetadata) metadata.set(row.activity_id, row.metadata);
+        for (const row of marketplace.listings) metadata.set(row.activity.id, row.metadata);
+        for (const p of marketplace.providers) providers.set(p.id, {id:p.id,name:p.name,is_demo:p.is_demo,verification_status:"unverified"});
         providers.set("00000000-0000-4000-8000-000000000010", { id: "00000000-0000-4000-8000-000000000010", name: "مزود افتراضي لاختبار العرض", is_demo: true, verification_status: "unverified" });
     } else { try {
         const client = await createClient();

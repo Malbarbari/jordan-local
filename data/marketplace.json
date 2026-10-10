@@ -1,0 +1,2642 @@
+{
+  "providers": [
+    {
+      "id": "50000000-0000-4000-8000-000000000001",
+      "name": "الجمعية الملكية لحماية الطبيعة / برية الأردن",
+      "name_en": "RSCN / Wild Jordan",
+      "location_id": "ajloun",
+      "category": "محميات وتجارب طبيعية",
+      "description": "مشغّل للمحميات وأكواخ عجلون ومخيم الرمانة؛ مرجع للتجارب الطبيعية المنظمة.",
+      "website": "https://www.rscn.org.jo/",
+      "source_url": "https://www.rscn.org.jo/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000002",
+      "name": "متنزه الأردن البيئي",
+      "name_en": "Jordan EcoPark",
+      "location_id": "jordan-valley",
+      "category": "إقامة بيئية",
+      "description": "أكواخ وخيارات إقامة في متنزه بيئي في الأغوار الشمالية.",
+      "website": "https://jordanecopark.com/accommodation",
+      "source_url": "https://jordanecopark.com/accommodation",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": "+962798000470",
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000003",
+      "name": "إيكوهوتيلز / نزل فينان البيئي",
+      "name_en": "EcoHotels / Feynan Ecolodge",
+      "location_id": "dana",
+      "category": "إقامة وسياحة مجتمعية",
+      "description": "نزل يعمل بالطاقة الشمسية في وادي فينان؛ إقامة وتجارب مرتبطة بالطبيعة والمجتمع المحلي.",
+      "website": "https://ecohotels.me/feynan",
+      "source_url": "https://ecohotels.me/feynan",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000004",
+      "name": "جمعية الكفاح / مقهى سماقة",
+      "name_en": "Al Kifah Society / Summaga Café",
+      "location_id": "ajloun",
+      "category": "نكهات محلية",
+      "description": "مقهى ومطعم يقدم أطباقًا من منتجات مزارع عجلون وفق تعريف هيئة تنشيط السياحة.",
+      "website": null,
+      "source_url": "https://international.visitjordan.com/wheretogo/ajloun/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": "+962797023723",
+      "whatsapp": null,
+      "social_url": "https://web.facebook.com/pg/SummagaCafe/about/",
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000005",
+      "name": "مزارع الخروب",
+      "name_en": "Carob Farms",
+      "location_id": "madaba",
+      "category": "مزارع وتعليم بيئي",
+      "description": "تجربة مزارع ليوم واحد للتعرف على الزراعة الطبيعية، كما تذكر هيئة تنشيط السياحة.",
+      "website": null,
+      "source_url": "https://international.visitjordan.com/wheretogo/madaba/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000006",
+      "name": "بركة دستنيشنز",
+      "name_en": "Baraka Destinations",
+      "location_id": "umm-qais",
+      "category": "ضيافة وتجارب مجتمعية",
+      "description": "بيوت ضيافة وتجارب يديرها المجتمع في أم قيس وبيلا، وجولات للتعرف على حكايات المكان.",
+      "website": "https://barakadestinations.com/",
+      "source_url": "https://barakadestinations.com/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": "+962776667660",
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000007",
+      "name": "بيت ستي",
+      "name_en": "Beit Sitti",
+      "location_id": "amman",
+      "category": "طبخ وثقافة",
+      "description": "تجربة طبخ ومشاركة وجبة عربية في بيت عائلي بجبل اللويبدة.",
+      "website": "https://beitsitti.com/",
+      "source_url": "https://beitsitti.com/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000008",
+      "name": "مطبخ البترا",
+      "name_en": "Petra Kitchen",
+      "location_id": "petra",
+      "category": "تجارب طبخ",
+      "description": "دروس طبخ مسائية ووجبة مشتركة مع طهاة محليين في وادي موسى.",
+      "website": "https://petrakitchen.com/reservations/",
+      "source_url": "https://petrakitchen.com/reservations/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000009",
+      "name": "ديب بلو للغوص",
+      "name_en": "Deep Blue Dive Center",
+      "location_id": "aqaba",
+      "category": "غوص وبحر",
+      "description": "مركز يقدم الغوص من الشاطئ والقارب وتجارب تعريفية بالغطس في العقبة.",
+      "website": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+      "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": "+962795400555",
+      "whatsapp": "962795400555",
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000010",
+      "name": "وادي رم تورز / مخيم صالح",
+      "name_en": "Wadi Rum Tours / Saleh’s Safari Camp",
+      "location_id": "wadi-rum",
+      "category": "جولات صحراوية",
+      "description": "جولات مركبات وتخييم بتشغيل عائلي في وادي رم وفق الموقع الرسمي.",
+      "website": "https://www.wadirumtours.com/tour-prices/",
+      "source_url": "https://www.wadirumtours.com/tour-prices/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": "+962795445966",
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "50000000-0000-4000-8000-000000000011",
+      "name": "مخيم وادي رم البدوي",
+      "name_en": "Wadi Rum Bedouin Camp",
+      "location_id": "wadi-rum",
+      "category": "تخييم ومغامرة",
+      "description": "مخيم وجولات جيب بمرافقة دليل بدوي، مع برامج معلنة لمدة ثلاث ساعات.",
+      "website": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+      "source_url": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+      "checked_at": "2026-10-10T00:00:00Z",
+      "phone": "+962772660319",
+      "whatsapp": null,
+      "social_url": null,
+      "is_demo": false,
+      "unclaimed": true
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000001",
+      "name": "رِواق الدروب التجريبي",
+      "name_en": "Riwaq Trails Demo",
+      "location_id": "irbid",
+      "category": "مسير وطبيعة",
+      "description": "تجارب مسير وتصوير افتراضية في شمال الأردن.",
+      "is_demo": true,
+      "unclaimed": true,
+      "website": null,
+      "source_url": null,
+      "checked_at": null,
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000002",
+      "name": "غيمة الزيتون التجريبية",
+      "name_en": "Olive Cloud Demo",
+      "location_id": "ajloun",
+      "category": "أكواخ وطبيعة",
+      "description": "نموذج منشأة أكواخ وطلعات غابات افتراضية في عجلون.",
+      "is_demo": true,
+      "unclaimed": true,
+      "website": null,
+      "source_url": null,
+      "checked_at": null,
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000003",
+      "name": "مائدة الحكايات التجريبية",
+      "name_en": "Story Table Demo",
+      "location_id": "amman",
+      "category": "طبخ وثقافة",
+      "description": "نموذج ورش طبخ وجولات نكهات افتراضية في عمّان.",
+      "is_demo": true,
+      "unclaimed": true,
+      "website": null,
+      "source_url": null,
+      "checked_at": null,
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000004",
+      "name": "فسحة التراب التجريبية",
+      "name_en": "Earth Break Demo",
+      "location_id": "madaba",
+      "category": "مزارع وعائلة",
+      "description": "نموذج مزرعة افتراضية للتجارب العائلية والأنشطة الزراعية.",
+      "is_demo": true,
+      "unclaimed": true,
+      "website": null,
+      "source_url": null,
+      "checked_at": null,
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000005",
+      "name": "سَمَر الرمل التجريبي",
+      "name_en": "Sand Stories Demo",
+      "location_id": "wadi-rum",
+      "category": "تخييم ومغامرة",
+      "description": "نموذج مخيم وتجارب صحراوية افتراضية في وادي رم.",
+      "is_demo": true,
+      "unclaimed": true,
+      "website": null,
+      "source_url": null,
+      "checked_at": null,
+      "phone": null,
+      "whatsapp": null,
+      "social_url": null
+    }
+  ],
+  "listings": [
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000001",
+        "business_id": "50000000-0000-4000-8000-000000000006",
+        "record_kind": "offer",
+        "title_ar": "إقامة بيت البركة في أم قيس",
+        "title_en": "Beit Al Baraka stay",
+        "description_ar": "بيت ضيافة في أم قيس مع تجارب يقدمها المضيفون المحليون. تفاصيل الغرفة والسعر تُؤكد مع المزود.",
+        "description_en": "Beit Al Baraka stay",
+        "location_id": "umm-qais",
+        "category": "culture",
+        "tags": [
+          "culture"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": null,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/umm-qais.jpg",
+        "source_url": "https://barakadestinations.com/",
+        "location_source_url": "https://barakadestinations.com/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "accommodation",
+        "discovery_tags": [
+          "cultural",
+          "local_tours",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000006",
+        "name": "بركة دستنيشنز",
+        "website": "https://barakadestinations.com/",
+        "source_url": "https://barakadestinations.com/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/umm-qais.jpg",
+        "title": "Umm Qais 25",
+        "alt_ar": "صورة عامة لمنطقة أم قيس؛ ليست صورة للمنشأة أو العرض",
+        "author": "Samir I. Sharbaty",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Umm_Qais_25.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Umm_Qais_25.JPG/960px-Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "أم قيس",
+      "location_label_en": "umm-qais"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000002",
+        "business_id": "50000000-0000-4000-8000-000000000006",
+        "record_kind": "offer",
+        "title_ar": "جولة حكايات عمّان",
+        "title_en": "Amman walking city tour",
+        "description_ar": "جولة مشي للتعرف على عمّان عبر أهلها وقصصها، وفق تعريف بركة دستنيشنز. تواصل لمعرفة البرنامج والسعر.",
+        "description_en": "Amman walking city tour",
+        "location_id": "amman",
+        "category": "heritage",
+        "tags": [
+          "heritage"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": null,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/amman-citadel.jpg",
+        "source_url": "https://barakadestinations.com/",
+        "location_source_url": "https://barakadestinations.com/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "cultural",
+          "local_tours",
+          "historical"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000006",
+        "name": "بركة دستنيشنز",
+        "website": "https://barakadestinations.com/",
+        "source_url": "https://barakadestinations.com/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/amman-citadel.jpg",
+        "title": "Amman Citadel",
+        "alt_ar": "صورة عامة لمنطقة عمّان؛ ليست صورة للمنشأة أو العرض",
+        "author": "David Bjorgen",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Amman_Citadel.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Amman_Citadel.jpg/960px-Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عمّان",
+      "location_label_en": "amman"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000003",
+        "business_id": "50000000-0000-4000-8000-000000000007",
+        "record_kind": "offer",
+        "title_ar": "اطبخ وشارك المائدة في بيت ستي",
+        "title_en": "Beit Sitti cook and dine",
+        "description_ar": "تعلّم إعداد وجبة عربية تشمل طبقًا رئيسيًا وسلطة وطبقًا جانبيًا وحلوى في جبل اللويبدة.",
+        "description_en": "Beit Sitti cook and dine",
+        "location_id": "amman",
+        "category": "food",
+        "tags": [
+          "food"
+        ],
+        "environment": [
+          "urban"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": null,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/amman-citadel.jpg",
+        "source_url": "https://beitsitti.com/",
+        "location_source_url": "https://beitsitti.com/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "food",
+          "cultural"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000007",
+        "name": "بيت ستي",
+        "website": "https://beitsitti.com/",
+        "source_url": "https://beitsitti.com/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/amman-citadel.jpg",
+        "title": "Amman Citadel",
+        "alt_ar": "صورة عامة لمنطقة عمّان؛ ليست صورة للمنشأة أو العرض",
+        "author": "David Bjorgen",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Amman_Citadel.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Amman_Citadel.jpg/960px-Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عمّان",
+      "location_label_en": "amman"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000004",
+        "business_id": "50000000-0000-4000-8000-000000000008",
+        "record_kind": "offer",
+        "title_ar": "أمسية طبخ أردني في مطبخ البترا",
+        "title_en": "Petra Kitchen evening cooking",
+        "description_ar": "درس طبخ مع طهاة محليين، ثم تناول الوجبة التي أعددتها في وادي موسى.",
+        "description_en": "Petra Kitchen evening cooking",
+        "location_id": "petra",
+        "category": "food",
+        "tags": [
+          "food"
+        ],
+        "environment": [
+          "urban"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": 35000,
+        "price_unit": "per_person",
+        "price_status": "source_checked",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": null,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/petra.jpg",
+        "source_url": "https://petrakitchen.com/reservations/",
+        "location_source_url": "https://petrakitchen.com/reservations/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "food",
+          "cultural"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000008",
+        "name": "مطبخ البترا",
+        "website": "https://petrakitchen.com/reservations/",
+        "source_url": "https://petrakitchen.com/reservations/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/petra.jpg",
+        "title": "Petra , Al-Khazneh 2",
+        "alt_ar": "صورة عامة لمنطقة البترا / وادي موسى؛ ليست صورة للمنشأة أو العرض",
+        "author": "Faraheed",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Petra_,_Al-Khazneh_2.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Petra_%2C_Al-Khazneh_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Petra_%2C_Al-Khazneh_2.jpg/960px-Petra_%2C_Al-Khazneh_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "البترا / وادي موسى",
+      "location_label_en": "petra"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000005",
+        "business_id": "50000000-0000-4000-8000-000000000009",
+        "record_kind": "offer",
+        "title_ar": "تجربة تعريفية بالغوص من الشاطئ",
+        "title_en": "Deep Blue introductory shore dive",
+        "description_ar": "تجربة تعلم أساسيات الغوص برفقة مدرب ثم النزول إلى شعاب المركز. تأكد من المتطلبات الطبية والعمرية.",
+        "description_en": "Deep Blue introductory shore dive",
+        "location_id": "aqaba",
+        "category": "adventure",
+        "tags": [
+          "adventure"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": null,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/aqaba-castle.jpg",
+        "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "location_source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "sea",
+          "adventure"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000009",
+        "name": "ديب بلو للغوص",
+        "website": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/aqaba-castle.jpg",
+        "title": "Aqaba castle - panoramio",
+        "alt_ar": "صورة عامة لمنطقة العقبة؛ ليست صورة للمنشأة أو العرض",
+        "author": "Alexey Komarov",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Aqaba_castle_-_panoramio.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Aqaba_castle_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Aqaba_castle_-_panoramio.jpg/960px-Aqaba_castle_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "العقبة",
+      "location_label_en": "aqaba"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000006",
+        "business_id": "50000000-0000-4000-8000-000000000009",
+        "record_kind": "offer",
+        "title_ar": "رحلة سنوركل بالقارب",
+        "title_en": "Deep Blue snorkel boat trip",
+        "description_ar": "رحلة سنوركل بالقارب مع معدات ودليل ووجبة غداء ومنشفة وفق صفحة المركز.",
+        "description_en": "Deep Blue snorkel boat trip",
+        "location_id": "aqaba",
+        "category": "adventure",
+        "tags": [
+          "adventure"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": null,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/aqaba-castle.jpg",
+        "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "location_source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "sea",
+          "swimming"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000009",
+        "name": "ديب بلو للغوص",
+        "website": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/aqaba-castle.jpg",
+        "title": "Aqaba castle - panoramio",
+        "alt_ar": "صورة عامة لمنطقة العقبة؛ ليست صورة للمنشأة أو العرض",
+        "author": "Alexey Komarov",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Aqaba_castle_-_panoramio.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Aqaba_castle_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Aqaba_castle_-_panoramio.jpg/960px-Aqaba_castle_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "العقبة",
+      "location_label_en": "aqaba"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000007",
+        "business_id": "50000000-0000-4000-8000-000000000010",
+        "record_kind": "offer",
+        "title_ar": "جولة جيب ثلاث ساعات مع مخيم صالح",
+        "title_en": "Saleh three-hour 4x4 tour",
+        "description_ar": "جولة مركبة ثلاث ساعات؛ السعر المنشور 70 دينارًا للفرد أو الزوجين أو العائلة وفق تعريف المزود.",
+        "description_en": "Saleh three-hour 4x4 tour",
+        "location_id": "wadi-rum",
+        "category": "adventure",
+        "tags": [
+          "adventure"
+        ],
+        "environment": [
+          "desert"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": 180,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/wadi-rum.jpg",
+        "source_url": "https://www.wadirumtours.com/tour-prices/",
+        "location_source_url": "https://www.wadirumtours.com/tour-prices/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "adventure",
+          "scenic",
+          "local_tours"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000010",
+        "name": "وادي رم تورز / مخيم صالح",
+        "website": "https://www.wadirumtours.com/tour-prices/",
+        "source_url": "https://www.wadirumtours.com/tour-prices/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/wadi-rum.jpg",
+        "title": "Wadi Rum 03",
+        "alt_ar": "صورة عامة لمنطقة وادي رم؛ ليست صورة للمنشأة أو العرض",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_03.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wadi_Rum_03.jpg/960px-Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "وادي رم",
+      "location_label_en": "wadi-rum"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000008",
+        "business_id": "50000000-0000-4000-8000-000000000011",
+        "record_kind": "offer",
+        "title_ar": "جولة جيب ثلاث ساعات في وادي رم",
+        "title_en": "Bedouin Camp three-hour jeep tour",
+        "description_ar": "جولة جيب برفقة دليل بدوي؛ تعرفة 20 دينارًا للشخص تخص مجموعة 3–6 أشخاص فقط.",
+        "description_en": "Bedouin Camp three-hour jeep tour",
+        "location_id": "wadi-rum",
+        "category": "adventure",
+        "tags": [
+          "adventure"
+        ],
+        "environment": [
+          "desert"
+        ],
+        "group_types": [],
+        "family_friendly": null,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "تواصل لتأكيد السعر والتوافر وشروط المشاركة. السعر المنشور لقطة مؤرخة.",
+        "duration_minutes": 180,
+        "capacity_people": null,
+        "available_months": null,
+        "image_path": "/images/tourism/wadi-rum.jpg",
+        "source_url": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+        "location_source_url": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+        "data_kind": "public_source",
+        "verification_status": "source_checked",
+        "source_checked_at": "2026-10-10T00:00:00Z",
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "adventure",
+          "scenic",
+          "local_tours"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "50000000-0000-4000-8000-000000000011",
+        "name": "مخيم وادي رم البدوي",
+        "website": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+        "source_url": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+        "verification_status": "source_checked"
+      },
+      "image": {
+        "path": "/images/tourism/wadi-rum.jpg",
+        "title": "Wadi Rum 03",
+        "alt_ar": "صورة عامة لمنطقة وادي رم؛ ليست صورة للمنشأة أو العرض",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_03.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wadi_Rum_03.jpg/960px-Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "وادي رم",
+      "location_label_en": "wadi-rum"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000101",
+        "business_id": "70000000-0000-4000-8000-000000000001",
+        "record_kind": "offer",
+        "title_ar": "مسير رواق الدروب بين الطبيعة",
+        "title_en": "Fictional demo offer 1",
+        "description_ar": "مسير رواق الدروب بين الطبيعة لدى رِواق الدروب التجريبي. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 1",
+        "location_id": "irbid",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 15000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 180,
+        "capacity_people": 12,
+        "available_months": null,
+        "image_path": "/images/tourism/umm-qais.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "nature",
+          "hiking",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000001",
+        "name": "رِواق الدروب التجريبي",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/umm-qais.jpg",
+        "title": "Umm Qais 25",
+        "alt_ar": "صورة عامة لمنطقة إربد؛ ليست صورة للمنشأة أو العرض",
+        "author": "Samir I. Sharbaty",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Umm_Qais_25.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Umm_Qais_25.JPG/960px-Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "إربد",
+      "location_label_en": "irbid"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000102",
+        "business_id": "70000000-0000-4000-8000-000000000001",
+        "record_kind": "offer",
+        "title_ar": "مسير الغروب والتصوير",
+        "title_en": "Fictional demo offer 2",
+        "description_ar": "مسير الغروب والتصوير لدى رِواق الدروب التجريبي. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 2",
+        "location_id": "irbid",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 12000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 120,
+        "capacity_people": 10,
+        "available_months": null,
+        "image_path": "/images/tourism/umm-qais.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "nature",
+          "hiking",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000001",
+        "name": "رِواق الدروب التجريبي",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/umm-qais.jpg",
+        "title": "Umm Qais 25",
+        "alt_ar": "صورة عامة لمنطقة إربد؛ ليست صورة للمنشأة أو العرض",
+        "author": "Samir I. Sharbaty",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Umm_Qais_25.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Umm_Qais_25.JPG/960px-Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "إربد",
+      "location_label_en": "irbid"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000103",
+        "business_id": "70000000-0000-4000-8000-000000000001",
+        "record_kind": "offer",
+        "title_ar": "جولة حكايات الشمال",
+        "title_en": "Fictional demo offer 3",
+        "description_ar": "جولة حكايات الشمال لدى رِواق الدروب التجريبي. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 3",
+        "location_id": "irbid",
+        "category": "heritage",
+        "tags": [
+          "heritage"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 10000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 120,
+        "capacity_people": 15,
+        "available_months": null,
+        "image_path": "/images/tourism/umm-qais.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "historical",
+          "cultural",
+          "local_tours"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000001",
+        "name": "رِواق الدروب التجريبي",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/umm-qais.jpg",
+        "title": "Umm Qais 25",
+        "alt_ar": "صورة عامة لمنطقة إربد؛ ليست صورة للمنشأة أو العرض",
+        "author": "Samir I. Sharbaty",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Umm_Qais_25.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Umm_Qais_25.JPG/960px-Umm_Qais_25.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "إربد",
+      "location_label_en": "irbid"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000104",
+        "business_id": "70000000-0000-4000-8000-000000000002",
+        "record_kind": "offer",
+        "title_ar": "مسير غابة غيمة الزيتون",
+        "title_en": "Fictional demo offer 4",
+        "description_ar": "مسير غابة غيمة الزيتون لدى غيمة الزيتون التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 4",
+        "location_id": "ajloun",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 18000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 180,
+        "capacity_people": 12,
+        "available_months": null,
+        "image_path": "/images/tourism/ajloun-forest.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "nature",
+          "hiking",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000002",
+        "name": "غيمة الزيتون التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/ajloun-forest.jpg",
+        "title": "Ajloun Forest Reserve in Jordan kz01",
+        "alt_ar": "صورة عامة لمنطقة عجلون؛ ليست صورة للمنشأة أو العرض",
+        "author": "Krzysztof Ziarnek, Kenraiz",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ajloun_Forest_Reserve_in_Jordan_kz01.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Ajloun_Forest_Reserve_in_Jordan_kz01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ajloun_Forest_Reserve_in_Jordan_kz01.jpg/960px-Ajloun_Forest_Reserve_in_Jordan_kz01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عجلون",
+      "location_label_en": "ajloun"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000105",
+        "business_id": "70000000-0000-4000-8000-000000000002",
+        "record_kind": "offer",
+        "title_ar": "كوخ غيمة الزيتون لليلة",
+        "title_en": "Fictional demo offer 5",
+        "description_ar": "كوخ غيمة الزيتون لليلة لدى غيمة الزيتون التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 5",
+        "location_id": "ajloun",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": null,
+        "price_unit": "unknown",
+        "price_status": "unknown",
+        "price_checked_at": null,
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": null,
+        "capacity_people": 4,
+        "available_months": null,
+        "image_path": "/images/tourism/ajloun-forest.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "accommodation",
+        "discovery_tags": [
+          "cabins",
+          "nature",
+          "couples"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000002",
+        "name": "غيمة الزيتون التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/ajloun-forest.jpg",
+        "title": "Ajloun Forest Reserve in Jordan kz01",
+        "alt_ar": "صورة عامة لمنطقة عجلون؛ ليست صورة للمنشأة أو العرض",
+        "author": "Krzysztof Ziarnek, Kenraiz",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ajloun_Forest_Reserve_in_Jordan_kz01.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Ajloun_Forest_Reserve_in_Jordan_kz01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ajloun_Forest_Reserve_in_Jordan_kz01.jpg/960px-Ajloun_Forest_Reserve_in_Jordan_kz01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عجلون",
+      "location_label_en": "ajloun"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000106",
+        "business_id": "70000000-0000-4000-8000-000000000002",
+        "record_kind": "offer",
+        "title_ar": "نزهة عائلية بين الزيتون",
+        "title_en": "Fictional demo offer 6",
+        "description_ar": "نزهة عائلية بين الزيتون لدى غيمة الزيتون التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 6",
+        "location_id": "ajloun",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 40000,
+        "price_unit": "per_group",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 180,
+        "capacity_people": 6,
+        "available_months": null,
+        "image_path": "/images/tourism/ajloun-forest.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "nature",
+          "family",
+          "budget"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000002",
+        "name": "غيمة الزيتون التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/ajloun-forest.jpg",
+        "title": "Ajloun Forest Reserve in Jordan kz01",
+        "alt_ar": "صورة عامة لمنطقة عجلون؛ ليست صورة للمنشأة أو العرض",
+        "author": "Krzysztof Ziarnek, Kenraiz",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ajloun_Forest_Reserve_in_Jordan_kz01.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Ajloun_Forest_Reserve_in_Jordan_kz01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ajloun_Forest_Reserve_in_Jordan_kz01.jpg/960px-Ajloun_Forest_Reserve_in_Jordan_kz01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عجلون",
+      "location_label_en": "ajloun"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000107",
+        "business_id": "70000000-0000-4000-8000-000000000003",
+        "record_kind": "offer",
+        "title_ar": "ورشة مائدة الحكايات الأردنية",
+        "title_en": "Fictional demo offer 7",
+        "description_ar": "ورشة مائدة الحكايات الأردنية لدى مائدة الحكايات التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 7",
+        "location_id": "amman",
+        "category": "food",
+        "tags": [
+          "food"
+        ],
+        "environment": [
+          "urban"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 22000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 150,
+        "capacity_people": 10,
+        "available_months": null,
+        "image_path": "/images/tourism/amman-citadel.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "food",
+          "cultural",
+          "family"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000003",
+        "name": "مائدة الحكايات التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/amman-citadel.jpg",
+        "title": "Amman Citadel",
+        "alt_ar": "صورة عامة لمنطقة عمّان؛ ليست صورة للمنشأة أو العرض",
+        "author": "David Bjorgen",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Amman_Citadel.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Amman_Citadel.jpg/960px-Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عمّان",
+      "location_label_en": "amman"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000108",
+        "business_id": "70000000-0000-4000-8000-000000000003",
+        "record_kind": "offer",
+        "title_ar": "ورشة فطور ومخبوزات",
+        "title_en": "Fictional demo offer 8",
+        "description_ar": "ورشة فطور ومخبوزات لدى مائدة الحكايات التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 8",
+        "location_id": "amman",
+        "category": "food",
+        "tags": [
+          "food"
+        ],
+        "environment": [
+          "urban"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 18000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 120,
+        "capacity_people": 8,
+        "available_months": null,
+        "image_path": "/images/tourism/amman-citadel.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "food",
+          "cultural"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000003",
+        "name": "مائدة الحكايات التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/amman-citadel.jpg",
+        "title": "Amman Citadel",
+        "alt_ar": "صورة عامة لمنطقة عمّان؛ ليست صورة للمنشأة أو العرض",
+        "author": "David Bjorgen",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Amman_Citadel.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Amman_Citadel.jpg/960px-Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عمّان",
+      "location_label_en": "amman"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000109",
+        "business_id": "70000000-0000-4000-8000-000000000003",
+        "record_kind": "offer",
+        "title_ar": "جولة نكهات وحكايات عمّان",
+        "title_en": "Fictional demo offer 9",
+        "description_ar": "جولة نكهات وحكايات عمّان لدى مائدة الحكايات التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 9",
+        "location_id": "amman",
+        "category": "heritage",
+        "tags": [
+          "heritage"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 14000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 120,
+        "capacity_people": 12,
+        "available_months": null,
+        "image_path": "/images/tourism/amman-citadel.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "food",
+          "cultural",
+          "local_tours"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000003",
+        "name": "مائدة الحكايات التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/amman-citadel.jpg",
+        "title": "Amman Citadel",
+        "alt_ar": "صورة عامة لمنطقة عمّان؛ ليست صورة للمنشأة أو العرض",
+        "author": "David Bjorgen",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Amman_Citadel.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Amman_Citadel.jpg/960px-Amman_Citadel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "عمّان",
+      "location_label_en": "amman"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000110",
+        "business_id": "70000000-0000-4000-8000-000000000004",
+        "record_kind": "offer",
+        "title_ar": "فسحة مزرعة للمجموعة",
+        "title_en": "Fictional demo offer 10",
+        "description_ar": "فسحة مزرعة للمجموعة لدى فسحة التراب التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 10",
+        "location_id": "madaba",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 45000,
+        "price_unit": "per_group",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 240,
+        "capacity_people": 8,
+        "available_months": null,
+        "image_path": "/images/tourism/mount-nebo.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "farms",
+          "family",
+          "nature"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000004",
+        "name": "فسحة التراب التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/mount-nebo.jpg",
+        "title": "Mount Nebo-4",
+        "alt_ar": "صورة عامة لمنطقة مادبا؛ ليست صورة للمنشأة أو العرض",
+        "author": "Faris El-Gwely",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mount_Nebo-4.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Mount_Nebo-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Mount_Nebo-4.JPG/960px-Mount_Nebo-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "مادبا",
+      "location_label_en": "madaba"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000111",
+        "business_id": "70000000-0000-4000-8000-000000000004",
+        "record_kind": "offer",
+        "title_ar": "مزارع صغير ليوم واحد",
+        "title_en": "Fictional demo offer 11",
+        "description_ar": "مزارع صغير ليوم واحد لدى فسحة التراب التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 11",
+        "location_id": "madaba",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 12000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 120,
+        "capacity_people": 10,
+        "available_months": null,
+        "image_path": "/images/tourism/mount-nebo.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "farms",
+          "family",
+          "nature"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000004",
+        "name": "فسحة التراب التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/mount-nebo.jpg",
+        "title": "Mount Nebo-4",
+        "alt_ar": "صورة عامة لمنطقة مادبا؛ ليست صورة للمنشأة أو العرض",
+        "author": "Faris El-Gwely",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mount_Nebo-4.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Mount_Nebo-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Mount_Nebo-4.JPG/960px-Mount_Nebo-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "مادبا",
+      "location_label_en": "madaba"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000112",
+        "business_id": "70000000-0000-4000-8000-000000000004",
+        "record_kind": "offer",
+        "title_ar": "نزهة وتصوير في فسحة التراب",
+        "title_en": "Fictional demo offer 12",
+        "description_ar": "نزهة وتصوير في فسحة التراب لدى فسحة التراب التجريبية. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 12",
+        "location_id": "madaba",
+        "category": "nature",
+        "tags": [
+          "nature"
+        ],
+        "environment": [
+          "countryside"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 30000,
+        "price_unit": "per_group",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 180,
+        "capacity_people": 6,
+        "available_months": null,
+        "image_path": "/images/tourism/mount-nebo.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "farms",
+          "scenic",
+          "nature"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000004",
+        "name": "فسحة التراب التجريبية",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/mount-nebo.jpg",
+        "title": "Mount Nebo-4",
+        "alt_ar": "صورة عامة لمنطقة مادبا؛ ليست صورة للمنشأة أو العرض",
+        "author": "Faris El-Gwely",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mount_Nebo-4.JPG",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Mount_Nebo-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Mount_Nebo-4.JPG/960px-Mount_Nebo-4.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "مادبا",
+      "location_label_en": "madaba"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000113",
+        "business_id": "70000000-0000-4000-8000-000000000005",
+        "record_kind": "offer",
+        "title_ar": "ليلة سمر الرمل تحت النجوم",
+        "title_en": "Fictional demo offer 13",
+        "description_ar": "ليلة سمر الرمل تحت النجوم لدى سَمَر الرمل التجريبي. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 13",
+        "location_id": "wadi-rum",
+        "category": "adventure",
+        "tags": [
+          "adventure"
+        ],
+        "environment": [
+          "desert"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 40000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 720,
+        "capacity_people": 12,
+        "available_months": null,
+        "image_path": "/images/tourism/wadi-rum.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "camps",
+          "adventure",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000005",
+        "name": "سَمَر الرمل التجريبي",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/wadi-rum.jpg",
+        "title": "Wadi Rum 03",
+        "alt_ar": "صورة عامة لمنطقة وادي رم؛ ليست صورة للمنشأة أو العرض",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_03.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wadi_Rum_03.jpg/960px-Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "وادي رم",
+      "location_label_en": "wadi-rum"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000114",
+        "business_id": "70000000-0000-4000-8000-000000000005",
+        "record_kind": "offer",
+        "title_ar": "مسير صحراوي عند الغروب",
+        "title_en": "Fictional demo offer 14",
+        "description_ar": "مسير صحراوي عند الغروب لدى سَمَر الرمل التجريبي. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 14",
+        "location_id": "wadi-rum",
+        "category": "adventure",
+        "tags": [
+          "adventure"
+        ],
+        "environment": [
+          "desert"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 16000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 120,
+        "capacity_people": 10,
+        "available_months": null,
+        "image_path": "/images/tourism/wadi-rum.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "hiking",
+          "adventure",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000005",
+        "name": "سَمَر الرمل التجريبي",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/wadi-rum.jpg",
+        "title": "Wadi Rum 03",
+        "alt_ar": "صورة عامة لمنطقة وادي رم؛ ليست صورة للمنشأة أو العرض",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_03.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wadi_Rum_03.jpg/960px-Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "وادي رم",
+      "location_label_en": "wadi-rum"
+    },
+    {
+      "activity": {
+        "id": "71000000-0000-4000-8000-000000000115",
+        "business_id": "70000000-0000-4000-8000-000000000005",
+        "record_kind": "offer",
+        "title_ar": "جلسة تراث وشاي بدوي",
+        "title_en": "Fictional demo offer 15",
+        "description_ar": "جلسة تراث وشاي بدوي لدى سَمَر الرمل التجريبي. تجربة افتراضية لاختبار الاكتشاف؛ لا تمثل منشأة أو عرضًا حقيقيًا.",
+        "description_en": "Fictional demo offer 15",
+        "location_id": "wadi-rum",
+        "category": "culture",
+        "tags": [
+          "culture"
+        ],
+        "environment": [
+          "desert"
+        ],
+        "group_types": [
+          "family",
+          "friends",
+          "couple",
+          "solo"
+        ],
+        "family_friendly": true,
+        "price_fils": 10000,
+        "price_unit": "per_person",
+        "price_status": "synthetic_demo",
+        "price_checked_at": "2026-10-10T00:00:00Z",
+        "price_valid_until": null,
+        "price_notes": "سعر افتراضي لتجربة التطبيق؛ ليس عرضًا تجاريًا حقيقيًا. النقل غير مشمول.",
+        "duration_minutes": 90,
+        "capacity_people": 15,
+        "available_months": null,
+        "image_path": "/images/tourism/wadi-rum.jpg",
+        "source_url": null,
+        "location_source_url": null,
+        "data_kind": "synthetic_demo",
+        "verification_status": "unverified",
+        "source_checked_at": null,
+        "status": "published",
+        "created_at": "2026-10-10T00:00:00Z",
+        "updated_at": "2026-10-10T00:00:00Z"
+      },
+      "metadata": {
+        "listing_kind": "business_offer",
+        "discovery_tags": [
+          "cultural",
+          "camps",
+          "scenic"
+        ],
+        "estimated_price_fils": null,
+        "estimated_price_unit": null
+      },
+      "provider": {
+        "id": "70000000-0000-4000-8000-000000000005",
+        "name": "سَمَر الرمل التجريبي",
+        "website": null,
+        "source_url": null,
+        "verification_status": "unverified"
+      },
+      "image": {
+        "path": "/images/tourism/wadi-rum.jpg",
+        "title": "Wadi Rum 03",
+        "alt_ar": "صورة عامة لمنطقة وادي رم؛ ليست صورة للمنشأة أو العرض",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadi_Rum_03.jpg",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wadi_Rum_03.jpg/960px-Wadi_Rum_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "changes": "Wikimedia-generated thumbnail; responsive display crop. No other edits. Image remains under its stated license. Illustrative regional photograph; not an image of this provider or its facilities.",
+        "checked_at": "2026-10-09T00:00:00Z"
+      },
+      "coordinates": null,
+      "currency": "JOD",
+      "location_label_ar": "وادي رم",
+      "location_label_en": "wadi-rum"
+    }
+  ],
+  "details": {
+    "71000000-0000-4000-8000-000000000001": {
+      "highlights": [
+        "إقامة في بيت ضيافة بحسب الخيار المتفق عليه؛ اسأل عن الوجبات والتجارب الإضافية."
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000002": {
+      "highlights": [],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000003": {
+      "highlights": [
+        "إعداد وجبة ومشاركتها حسب القائمة الموسمية؛ أكد الحساسيات الغذائية مع المزود."
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000004": {
+      "highlights": [
+        "درس طبخ ووجبة",
+        "مشروبات غير كحولية ووصفات تذكارية"
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "أمسية طبخ أردني في مطبخ البترا",
+          "currency": "JOD",
+          "amount_fils": 35000,
+          "unit": "per_person",
+          "status": "source_checked",
+          "audience": "everyone",
+          "conditions": [
+            "الحجز المسبق لدى المزود موصى به، خصوصًا في الموسم.",
+            "السعر المنشور 35 دينارًا للشخص؛ لا يشمل المواصلات."
+          ],
+          "source_url": "https://petrakitchen.com/reservations/",
+          "checked_at": "2026-10-10T00:00:00Z",
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000005": {
+      "highlights": [
+        "تعليم أساسيات الغوص ومرافقة المدرب وفق وصف المركز"
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "تجربة تعريفية بالغوص من الشاطئ",
+          "currency": "JOD",
+          "amount_fils": 45000,
+          "unit": "unspecified",
+          "status": "source_checked",
+          "audience": "everyone",
+          "conditions": [
+            "الفترة ووحدة الفوترة غير مصرح بها بوضوح؛ أكد العرض مع المركز.",
+            "المشاركة تخضع لإجراءات المركز ومتطلبات السلامة."
+          ],
+          "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+          "checked_at": "2026-10-10T00:00:00Z",
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000006": {
+      "highlights": [
+        "معدات سنوركل ودليل",
+        "غداء بالقارب ومنشفة"
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "رحلة سنوركل بالقارب",
+          "currency": "JOD",
+          "amount_fils": 40000,
+          "unit": "unspecified",
+          "status": "source_checked",
+          "audience": "everyone",
+          "conditions": [
+            "أكد وحدة السعر والسعة والتوافر مع المركز قبل التخطيط."
+          ],
+          "source_url": "https://www.deepbluedivecenter.com/aqaba-daily-scuba-diving-prices/",
+          "checked_at": "2026-10-10T00:00:00Z",
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000007": {
+      "highlights": [
+        "ماء وشاي بدوي وخبز عربي ضمن الجولة"
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "جولة جيب ثلاث ساعات مع مخيم صالح",
+          "currency": "JOD",
+          "amount_fils": 70000,
+          "unit": "per_group",
+          "status": "source_checked",
+          "audience": "everyone",
+          "conditions": [
+            "السعر لفرد أو زوجين أو عائلة: بالغان وحتى طفلين أكبر من 3 وأصغر من 15 سنة.",
+            "لا يُطبّق تلقائيًا على مجموعة أصدقاء؛ اطلب عرضًا للمجموعة.",
+            "رسوم دخول المحمية منفصلة حسب وضع الزائر."
+          ],
+          "source_url": "https://www.wadirumtours.com/tour-prices/",
+          "checked_at": "2026-10-10T00:00:00Z",
+          "optional": false,
+          "requires_confirmation": true
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000008": {
+      "highlights": [
+        "3 ساعات جولة جيب",
+        "دليل بدوي ومواصلات الجيب"
+      ],
+      "practical": [
+        "تواصل مع المزود للتأكد من السعة والتوافر ومتطلبات العمر واللياقة.",
+        "الصور العامة إن وُجدت توضيحية؛ ليست صورًا لمنشأة هذا المزود."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "جولة جيب ثلاث ساعات في وادي رم",
+          "currency": "JOD",
+          "amount_fils": 20000,
+          "unit": "per_person",
+          "status": "source_checked",
+          "audience": "everyone",
+          "conditions": [
+            "20 دينارًا للشخص لمجموعة 3–6 فقط؛ فرد واحد 60؛ شخصان 30 للشخص؛ 7 فأكثر بالتواصل.",
+            "أكد اللقاء وشروط المشاركة والتشغيل مباشرة مع المزود."
+          ],
+          "source_url": "https://www.wadirumbedouincamp.com/3-hours-jeep-tours/",
+          "checked_at": "2026-10-10T00:00:00Z",
+          "optional": false,
+          "min_people": 3,
+          "max_people": 6
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000101": {
+      "highlights": [
+        "مرشد افتراضي ومسير ثلاث ساعات",
+        "استراحة شاي ضمن المثال"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "مسير رواق الدروب بين الطبيعة",
+          "currency": "JOD",
+          "amount_fils": 15000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000102": {
+      "highlights": [
+        "مسير خفيف ونقاط تصوير افتراضية"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "مسير الغروب والتصوير",
+          "currency": "JOD",
+          "amount_fils": 12000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000103": {
+      "highlights": [
+        "جولة تراث افتراضية برفقة راوٍ محلي"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "جولة حكايات الشمال",
+          "currency": "JOD",
+          "amount_fils": 10000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000104": {
+      "highlights": [
+        "مسير غابة افتراضي واستراحة شاي"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "مسير غابة غيمة الزيتون",
+          "currency": "JOD",
+          "amount_fils": 18000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000105": {
+      "highlights": [
+        "غرفة كوخ افتراضية لليلة؛ لا تشمل النقل"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "كوخ غيمة الزيتون لليلة",
+          "currency": "JOD",
+          "amount_fils": 65000,
+          "unit": "per_night",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000106": {
+      "highlights": [
+        "جلسة نزهة افتراضية للمجموعة"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "نزهة عائلية بين الزيتون",
+          "currency": "JOD",
+          "amount_fils": 40000,
+          "unit": "per_group",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000107": {
+      "highlights": [
+        "ورشة طبخ ووجبة افتراضية"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "ورشة مائدة الحكايات الأردنية",
+          "currency": "JOD",
+          "amount_fils": 22000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000108": {
+      "highlights": [
+        "تحضير فطور ومشاركة المائدة الافتراضية"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "ورشة فطور ومخبوزات",
+          "currency": "JOD",
+          "amount_fils": 18000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000109": {
+      "highlights": [
+        "جولة تعريف بالنكهات ضمن المثال"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "جولة نكهات وحكايات عمّان",
+          "currency": "JOD",
+          "amount_fils": 14000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000110": {
+      "highlights": [
+        "جلسة مزرعة افتراضية ونشاط زراعي"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "فسحة مزرعة للمجموعة",
+          "currency": "JOD",
+          "amount_fils": 45000,
+          "unit": "per_group",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000111": {
+      "highlights": [
+        "نشاط زراعة افتراضي للعائلة"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "مزارع صغير ليوم واحد",
+          "currency": "JOD",
+          "amount_fils": 12000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000112": {
+      "highlights": [
+        "نزهة وتصوير افتراضي دون وجبات"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "نزهة وتصوير في فسحة التراب",
+          "currency": "JOD",
+          "amount_fils": 30000,
+          "unit": "per_group",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000113": {
+      "highlights": [
+        "إقامة خيمة افتراضية وعشاء وفطور"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "ليلة سمر الرمل تحت النجوم",
+          "currency": "JOD",
+          "amount_fils": 40000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000114": {
+      "highlights": [
+        "مسير صحراوي افتراضي واستراحة"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "مسير صحراوي عند الغروب",
+          "currency": "JOD",
+          "amount_fils": 16000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    },
+    "71000000-0000-4000-8000-000000000115": {
+      "highlights": [
+        "حكايات وشاي افتراضيان"
+      ],
+      "practical": [
+        "نموذج تجريبي بالكامل؛ لا يوجد مزود فعلي أو حجز.",
+        "السعة والمدة افتراضات تطوير لا تمثل توافرًا حقيقيًا."
+      ],
+      "quotes": [
+        {
+          "id": "main",
+          "label_ar": "جلسة تراث وشاي بدوي",
+          "currency": "JOD",
+          "amount_fils": 10000,
+          "unit": "per_person",
+          "status": "demo_estimate",
+          "audience": "everyone",
+          "conditions": [
+            "سعر افتراضي للنموذج التجريبي؛ ليس دراسة أسعار السوق."
+          ],
+          "source_url": null,
+          "checked_at": null,
+          "optional": false
+        }
+      ],
+      "gallery": [],
+      "image_url": null,
+      "image_rights_confirmed": false
+    }
+  }
+}

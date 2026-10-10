@@ -28,7 +28,7 @@ function safeLink(url:string|null) { return url && /^https?:\/\//.test(url) ? ur
 export function TourismCard({ row, party, demo=false }: { row: TourismListing; party: number|null; demo?:boolean }) {
  const state=useAccount(),quote=state.details[row.activity.id]?.quotes.find(q=>!q.optional),a=row.activity, estimate=quote?null:demoEstimate(row,demo);
  return <article className="experience-card tourism-card">
-  <div className="experience-art"><TourismMedia row={row}/><span className="category-pill">{kindLabels[row.metadata.listing_kind]}</span></div>
+  <div className="experience-art"><TourismMedia row={row}/><span className="category-pill">{kindLabels[row.metadata.listing_kind]}{a.data_kind==="synthetic_demo"?" · نموذج تجريبي":""}</span></div>
   <div className="experience-body"><div className="eyebrow"><MapPin size={13} aria-hidden="true"/>{tourismLocations[a.location_id]}</div><h3>{a.title_ar}</h3><p className="description">{a.description_ar}</p>
    <div className="preference-chips">{row.metadata.discovery_tags.slice(0,3).map(tag=><span key={tag}>{discoveryLabels[tag]}</span>)}</div>
    {row.provider && <p className="provider-name">{row.provider.name}</p>}
@@ -70,7 +70,6 @@ export default function TourismExplorer({ featured=false }: { featured?:boolean 
  const localFilters=TourismFiltersSchema.safeParse({query:controls.query,...(controls.location_id?{location_id:controls.location_id}:{}),...(controls.tag?{tag:controls.tag}:{}),...(controls.party_size?{party_size:Number(controls.party_size)}:{}),...(controls.budget?{budget_fils:jodToFils(controls.budget)}:{}),...(controls.listing_kind?{listing_kind:controls.listing_kind}:{}),...(controls.category?{category:controls.category}:{})});
  const local=localFilters.success?filterTourism(account.demo?.listings??[],localFilters.data,new Date()).rows:[];
  const sorted=rankTourism([...rows,...local],controls.query).sort((a,b)=>sort==="name"?a.activity.title_ar.localeCompare(b.activity.title_ar,"ar"):sort==="region"?a.location_label_ar.localeCompare(b.location_label_ar,"ar"):0);
- const locals=catalog.filter(r=>r.provider && ["60000000-0000-4000-8000-000000000014","60000000-0000-4000-8000-000000000015","60000000-0000-4000-8000-000000000026"].includes(r.activity.id)).concat(catalog.filter(r=>r.activity.data_kind==="provider_submitted" && r.provider)).slice(0,3);
  return <>
   {featured && <section className="category-section" aria-labelledby="category-title"><div className="section-heading"><div><span className="eyebrow">على مزاجك</span><h2 id="category-title">أي طلعة تشبهك اليوم؟</h2></div><p>اختَر اهتمامك، واكتشف طريقًا جديدًا.</p></div><div className="category-grid">{categories.map(({label,tag,Icon})=><button className={`category-tile ${controls.tag===tag?"selected":""}`} type="button" key={tag} onClick={()=>shortcut({tag})} aria-pressed={controls.tag===tag}><Icon size={29} strokeWidth={1.4} aria-hidden="true"/><span>{label}</span><ArrowUpLeft size={15} aria-hidden="true"/></button>)}</div></section>}
   <section id="tourism" className="tourism-section" aria-labelledby="tourism-title">
@@ -85,6 +84,5 @@ export default function TourismExplorer({ featured=false }: { featured?:boolean 
    </div>
   </section>
   {featured && <section className="region-section" aria-labelledby="region-title"><div className="section-heading"><div><span className="eyebrow">من الشمال للجنوب</span><h2 id="region-title">كل منطقة، إلها حكاية.</h2></div><p>مدن عتيقة، غابات خضراء، وصحراء بلا حدود.</p></div><div className="region-grid">{regions.map(id=>{const matches=catalog.filter(r=>r.activity.location_id===id),row=matches.find(r=>r.image);return <div className="region-tile" key={id}><button type="button" onClick={()=>shortcut({location_id:id})}><div className="region-art">{row?<TourismMedia row={row}/>:<MapPin size={35} aria-hidden="true"/>}</div><span><strong>{tourismLocations[id as keyof typeof tourismLocations]}</strong><small>{catalog.length?`${matches.length} قوائم`:"…"}</small></span><ArrowUpLeft size={18} aria-hidden="true"/></button>{row && <ImageCredit row={row}/>}</div>;})}</div></section>}
-  {featured && <section className="local-section" aria-labelledby="local-title"><div className="section-heading"><div><span className="eyebrow">قريبين من المكان، وأهله</span><h2 id="local-title">تجارب محلية تستاهل تنعرف.</h2></div><Link className="text-link" href="/business">شارك تجربتك معنا ↗</Link></div><p className="section-subtitle">تعرّف على أصحاب التجارب من مصادرهم، واكتشف الأردن من زاوية أقرب.</p>{locals.length?<div className="experience-grid">{locals.map(row=><TourismCard key={row.activity.id} row={row} party={null} demo={meta.data_mode==="seed"}/>)}</div>:<p className="muted">أضف تجربتك المحلية، لتكون جزءًا من الاكتشاف.</p>}</section>}
  </>;
 }

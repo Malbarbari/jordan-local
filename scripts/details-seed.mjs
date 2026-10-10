@@ -26,8 +26,7 @@ if(process.argv.includes('--create')){
  data[id(17)].practical=['تأكد من فتح المسار وملاءمة الطقس مع المحمية قبل الانطلاق.','مسار مائي؛ راجع متطلبات العمر واللياقة ومعدات السلامة مباشرة مع المشغّل.'];
  data[id(14)].quotes=[quote('double','كوخ مزدوج قياسي',45,'unspecified','everyone',['يشمل ضريبة 16%.','الفترة الزمنية غير محددة في المصدر؛ تأكد من المزود قبل حساب الليالي.'],'https://jordanecopark.com/accommodation')];
  data[id(14)].highlights=['أكواخ في متنزه بيئي بالأغوار الشمالية','خيارات إقامة مزدوجة وثلاثية وعائلية وفق وصف المزود'];
- const demos=[ [13,85,'per_night','كوخ · مثال إقامة تجريبي'],[15,12,'per_person','وجبة · مثال تجريبي'],[26,25,'per_person','تجربة مزرعة · مثال تجريبي'],[31,35,'per_person','تخييم · مثال تجريبي'],[32,140,'per_night','غرفة · مثال إقامة تجريبي'] ];
- for(const [n,amount,unit,label] of demos)data[id(n)].quotes=[quote('demo',label,amount,unit,'everyone',['تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.','لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر.'],null,'demo_estimate')];
+ // Fictional prices belong only to fictional marketplace providers.
  const images=JSON.parse(fs.readFileSync('data/tourism.images.json','utf8'));
  if(images['wadi-rum-camels'])data[id(5)].gallery=[images['wadi-rum-camels']];
  fs.writeFileSync(path,JSON.stringify(data,null,2)+'\n');

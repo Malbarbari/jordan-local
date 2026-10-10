@@ -75,7 +75,7 @@ describe("verified tourism data and modular filtering", () => {
     it("serves source data through the actual backend with no-store and validated filters", async () => {
         const response=await GET(new Request("http://localhost:3000/api/tourism?location_id=petra"));
         expect(response.status).toBe(200); expect(response.headers.get("Cache-Control")).toBe("no-store");
-        const body=TourismResponseSchema.parse(await response.json()); expect(body.data).toHaveLength(2); expect(body.meta.engine).toBe("rules_discovery");
+        const body=TourismResponseSchema.parse(await response.json()); expect(body.data).toHaveLength(3); expect(body.data.every(r=>r.activity.location_id==="petra")).toBe(true); expect(body.meta.engine).toBe("rules_discovery");
     });
     it.each(["budget_fils=-1","party_size=0","party_size=1.5","location_id=fake","owner_id=forged","location_id=petra&location_id=amman"])("rejects unsupported filter %s", async query => {
         expect((await GET(new Request(`http://localhost:3000/api/tourism?${query}`))).status).toBe(400);

@@ -6,9 +6,10 @@ import { createClient } from "@/lib/supabase/server";
 import { loadActivities } from "./activities";
 import { enrichCatalog } from "./catalog";
 import { tourismLocations } from "@/contracts/tourism";
+import { marketplace } from "./marketplace";
 export const realTourism: TourismListing[] = source.map(row => TourismListingSchema.parse(row));
 export async function loadTourism(): Promise<TourismListing[]> {
-    if (dataMode() === "seed") return realTourism;
+    if (dataMode() === "seed") return [...realTourism, ...marketplace.listings];
     const client = await createClient();
     const { data, error } = await client.from("tourism_listings").select("id,business_id,payload").eq("status", "published").order("id").limit(1001);
     if (error || !data) throw new HttpError(503, "TOURISM_DATABASE_UNAVAILABLE", "تعذّر تحميل الوجهات الحقيقية. راجع migration 003 وseed_tourism.sql؛ لم نستبدل قاعدة البيانات بنسخة محلية.");

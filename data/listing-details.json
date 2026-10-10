@@ -383,24 +383,7 @@
   "60000000-0000-4000-8000-000000000013": {
     "highlights": [],
     "practical": [],
-    "quotes": [
-      {
-        "id": "demo",
-        "label_ar": "كوخ · مثال إقامة تجريبي",
-        "currency": "JOD",
-        "amount_fils": 85000,
-        "unit": "per_night",
-        "status": "demo_estimate",
-        "audience": "everyone",
-        "conditions": [
-          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
-          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
-        ],
-        "source_url": null,
-        "checked_at": null,
-        "optional": false
-      }
-    ],
+    "quotes": [],
     "gallery": [],
     "image_url": null,
     "image_rights_confirmed": false
@@ -436,24 +419,7 @@
   "60000000-0000-4000-8000-000000000015": {
     "highlights": [],
     "practical": [],
-    "quotes": [
-      {
-        "id": "demo",
-        "label_ar": "وجبة · مثال تجريبي",
-        "currency": "JOD",
-        "amount_fils": 12000,
-        "unit": "per_person",
-        "status": "demo_estimate",
-        "audience": "everyone",
-        "conditions": [
-          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
-          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
-        ],
-        "source_url": null,
-        "checked_at": null,
-        "optional": false
-      }
-    ],
+    "quotes": [],
     "gallery": [],
     "image_url": null,
     "image_rights_confirmed": false
@@ -717,24 +683,7 @@
   "60000000-0000-4000-8000-000000000026": {
     "highlights": [],
     "practical": [],
-    "quotes": [
-      {
-        "id": "demo",
-        "label_ar": "تجربة مزرعة · مثال تجريبي",
-        "currency": "JOD",
-        "amount_fils": 25000,
-        "unit": "per_person",
-        "status": "demo_estimate",
-        "audience": "everyone",
-        "conditions": [
-          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
-          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
-        ],
-        "source_url": null,
-        "checked_at": null,
-        "optional": false
-      }
-    ],
+    "quotes": [],
     "gallery": [],
     "image_url": null,
     "image_rights_confirmed": false
@@ -774,24 +723,7 @@
   "60000000-0000-4000-8000-000000000031": {
     "highlights": [],
     "practical": [],
-    "quotes": [
-      {
-        "id": "demo",
-        "label_ar": "تخييم · مثال تجريبي",
-        "currency": "JOD",
-        "amount_fils": 35000,
-        "unit": "per_person",
-        "status": "demo_estimate",
-        "audience": "everyone",
-        "conditions": [
-          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
-          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
-        ],
-        "source_url": null,
-        "checked_at": null,
-        "optional": false
-      }
-    ],
+    "quotes": [],
     "gallery": [],
     "image_url": null,
     "image_rights_confirmed": false
@@ -799,24 +731,7 @@
   "60000000-0000-4000-8000-000000000032": {
     "highlights": [],
     "practical": [],
-    "quotes": [
-      {
-        "id": "demo",
-        "label_ar": "غرفة · مثال إقامة تجريبي",
-        "currency": "JOD",
-        "amount_fils": 140000,
-        "unit": "per_night",
-        "status": "demo_estimate",
-        "audience": "everyone",
-        "conditions": [
-          "تقدير افتراضي للتخطيط، وليس عرض سعر من المزود.",
-          "لا يشمل النقل أو الإضافات، ولا يضمن سعة الغرفة أو التوافر."
-        ],
-        "source_url": null,
-        "checked_at": null,
-        "optional": false
-      }
-    ],
+    "quotes": [],
     "gallery": [],
     "image_url": null,
     "image_rights_confirmed": false
