@@ -1,11 +1,11 @@
 import { createHash } from "node:crypto";
-import { RecommendResponseSchema, type Activity, type RecommendRequest, type Recommendation, type Preferences, type ReasonCode } from "@/contracts";
+import { PreferencesSchema, RecommendResponseSchema, type Activity, type RecommendRequest, type Recommendation, type Preferences, type ReasonCode } from "@/contracts";
 import { dataMode } from "@/lib/runtime";
 import { candidate, eligibility, type Candidate } from "./constraints";
 import { normalize, questionsFor } from "./preferences";
 import { configuredAI, validateRank, type AIProvider } from "./ai";
 import type { CatalogMetadata } from "@/contracts/catalog";
-import { discoveryMatches, discoveryReason, diversifyTies, queryDiscoveryTags } from "./discovery";
+import { discoveryMatches, discoveryReason, diversifyTies, queryDiscoveryTags, requiredDiscoveryTags } from "./discovery";
 function reasons(codes: ReasonCode[], row: Candidate, p: Preferences) {
     const ar = p.locale === "ar";
     return codes.map(code => {
@@ -29,7 +29,7 @@ export async function recommend(request: RecommendRequest, activities: Activity[
     const warnings: string[] = [];
     if (ai && request.query) {
         try {
-            extracted = await ai.extract(request);
+            extracted = PreferencesSchema.parse(await ai.extract(request));
         }
         catch {
             warnings.push("تعذّر تحليل النص بالذكاء الاصطناعي؛ استُخدمت الحقول والقواعد المحدودة.");
@@ -45,6 +45,8 @@ export async function recommend(request: RecommendRequest, activities: Activity[
         return RecommendResponseSchema.parse({ ...base, status: "clarification", engine: "none" });
     let eligible: Candidate[] = [];
     for (const activity of activities) {
+        const required = requiredDiscoveryTags(request.query);
+        if (required.length && !required.every(tag => options?.catalog?.get(activity.id)?.discovery_tags.includes(tag))) continue;
         const state = eligibility(activity, preferences, now);
         if (state === "unconfirmed")
             base.unconfirmed_count++;

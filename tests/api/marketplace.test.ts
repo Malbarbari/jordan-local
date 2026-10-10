@@ -72,11 +72,11 @@ it("recommends actual Irbid business offers for four friends within 70 JOD group
     const { entries } = await enrichCatalog(offers.map(r => r.activity));
     expect(entries.every(e => e.provider?.is_demo && e.provider.id === e.activity.business_id)).toBe(true);
 });
-it("generates byte-identical seeds with stable IDs and no conflict overwrites or owner assignment", () => {
+it("generates identical SQL across checkout line endings with stable IDs and no conflict overwrites or owner assignment", () => {
     const paths = ["supabase/seed_marketplace.sql", "supabase/seed_marketplace_demo.sql"];
     const before = paths.map(p => readFileSync(p, "utf8"));
     execFileSync(process.execPath, ["scripts/marketplace-seed.mjs"]);
-    paths.forEach((p, i) => { const after = readFileSync(p, "utf8"); expect(after).toBe(before[i]); expect(after).not.toContain("do update"); expect(after).toContain("on conflict(id) do nothing"); expect(after).toContain("owner_id"); });
+    paths.forEach((p, i) => { const after = readFileSync(p, "utf8"); expect(after.replace(/\r\n/g,"\n")).toBe(before[i].replace(/\r\n/g,"\n")); expect(after).not.toContain("do update"); expect(after).toContain("on conflict(id) do nothing"); expect(after).toContain("owner_id"); });
     expect(before[0]).not.toContain("synthetic_demo");
     expect(before[0]).not.toContain("demo_estimate");
 });

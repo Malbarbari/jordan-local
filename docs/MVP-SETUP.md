@@ -4,7 +4,7 @@
 
 Use this existing repository with Node 24. Run npm.cmd ci, copy .env.example only if .env.local does not exist, then npm.cmd run dev. Open http://localhost:3000.
 
-Default DATA_MODE=seed, AI_MODE=rules and ALLOW_PAID_AI=false need no credentials. Public tourism discovery has 32 real source-backed introductions and dated conditional prices. The v1 budget planner uses the preserved labeled synthetic demo catalog. /signup offers a separately labeled local traveler/business demo saved only in this browser. No email/password is collected for that demo; logout clears it.
+Default DATA_MODE=seed, AI_MODE=rules and ALLOW_PAID_AI=false need no credentials. Public tourism discovery has 40 real source-backed introductions/offers and 15 clearly fictional marketplace offers and dated conditional prices. The v1 budget planner uses the preserved labeled synthetic demo catalog. /signup offers a separately labeled local traveler/business demo saved only in this browser. No email/password is collected for that demo; logout clears it.
 
 /business retains its original temporary preview. /business/manage is the new account-aware editor. Local demo listings appear only while that demo is active; they do not enter server-side /api/recommend or production data.
 
@@ -12,8 +12,8 @@ Default DATA_MODE=seed, AI_MODE=rules and ALLOW_PAID_AI=false need no credential
 
 No SQL or external account changes have been performed. Use your own project and consented test users.
 
-1. Review/apply migrations 001_init.sql, 002_catalog_metadata.sql, 003_tourism_listings.sql, 004_accounts_details.sql, in order. Apply each once. Never drop/reset existing tables; reconcile already-applied migrations first.
-2. Apply seed.sql, seed_catalog.sql, seed_tourism.sql and seed_details.sql. The last contains actual source quotes and omits every fictional demo estimate. The first seeds include clearly synthetic test activities. Curated provider identities are unclaimed; never assign a real company to your account without consent/review.
+1. Review/apply migrations 001_init.sql, 002_catalog_metadata.sql, 003_tourism_listings.sql, 004_accounts_details.sql, 005_directory_geography.sql, 006_preferences_business_settings.sql, in order. Apply each once. Never drop/reset existing tables; reconcile already-applied migrations first.
+2. Apply seed.sql, seed_catalog.sql, seed_tourism.sql, seed_details.sql and seed_marketplace.sql. Optional seed_marketplace_demo.sql is for a separate demo database only. seed_details.sql contains actual source quotes and omits every fictional demo estimate. The first seeds include clearly synthetic test activities. Curated provider identities are unclaimed; never assign a real company to your account without consent/review.
 3. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in .env.local, DATA_MODE=supabase, APP_ORIGIN=http://localhost:3000. Keep AI_MODE=rules, ALLOW_PAID_AI=false and NEXT_PUBLIC_UI_DEMO=false.
 4. In Auth, set Site URL and allow the exact http://localhost:3000/auth/callback redirect. For a deployed host, set its exact origin and callback too. Leave email confirmation enabled. Configure email delivery as appropriate. No secret service-role key belongs in application runtime.
 5. Restart/rebuild after environment changes. /signup now creates an actual Supabase account. With confirmation enabled it reports that email verification is required and does not claim a logged-in session. Follow the callback, then login. A profile trigger records sanitized display name/account type; account type grants no business privileges.
@@ -53,3 +53,5 @@ See README, TEAM_HANDOFF, FINAL-DELIVERY and MVP-DEMO for current scope. Earlier
 After migration 004, review/apply `005_directory_geography.sql`, then `seed_marketplace.sql` after the existing tourism/detail seeds. It adds unclaimed provider identities and real advertised offers with stable IDs and no conflict overwrite. The directory profile descriptions are maintained in the validated `data/marketplace.json`. Never grant ownership by matching names.
 
 `node scripts/marketplace-seed.mjs` regenerates SQL without a database connection. `seed_marketplace_demo.sql` is optional for an isolated demo database only; it adds clearly fictional businesses/offers, never real contact data. Production requires no fictional seed. Do not reset an existing database. Validate with separate business A/B accounts: listing/profile edits must fail across owners and neither may edit an unclaimed researched profile.
+
+For migration 006 (saved preferences, owner-private licensing, public projection) and the additional routes/pages, read [backend integration](BACKEND-AI-HANDOFF.md). Apply it after 005; no Storage upload or administrative verification is implemented.

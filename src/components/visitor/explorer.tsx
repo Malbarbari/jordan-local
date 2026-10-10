@@ -1,5 +1,8 @@
 "use client";
 import {useAccount} from "@/components/account/context";
+import {api} from "@/components/account/context";
+import {UserPreferencesSchema} from "@/contracts/settings";
+import {savedPreferencesToOverrides} from "@/lib/recommendation/saved-preferences";
 import {localRecommendations} from "@/lib/tourism/local-recommendations";
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -53,6 +56,7 @@ export default function Explorer() {
             busy.current = false;
         }
     }
+    async function saved(){try{setError("");const p=UserPreferencesSchema.parse(await api("/api/account/preferences"));await send(RecommendRequestSchema.parse({schema_version:1,locale:"ar",query,overrides:savedPreferencesToOverrides(p)}));}catch(e){setError(e instanceof Error?e.message:"تعذّر تحميل التفضيلات.");}}
     function submit(event: FormEvent) { event.preventDefault(); const input = { schema_version: 1, locale: "ar", query, overrides: { party_size: party === "" ? null : Number(party), budget_fils: budget === "" ? null : jodToFils(budget), budget_scope: "per_group", budget_basis: "activity_only", destination_location_ids: city ? [city] : [], group_type: group || null, interests } }; const parsed = RecommendRequestSchema.safeParse(input); if (!parsed.success) {
         setError("راجع عدد الأشخاص (1–30) والميزانية (دينار، حتى ثلاث خانات عشرية).");
         return;
@@ -82,6 +86,7 @@ export default function Explorer() {
     </fieldset>
    </form>
    <div className="sample-row"><span>جرّب مثالًا:</span>{samples.map((value, index) => <button type="button" key={value.name} onClick={() => sample(index)} disabled={pending}>{value.name}</button>)}</div>
+   <div className="sample-row"><button type="button" disabled={pending||!query.trim()} onClick={()=>void send(RecommendRequestSchema.parse({schema_version:1,locale:"ar",query,overrides:{}}))}>حلّل وصفي أولًا · دون قيم النموذج</button>{account.account&&<button type="button" disabled={pending} onClick={()=>void saved()}>اقترح بتفضيلاتي المحفوظة</button>}<Link href="/account/preferences">إدارة التفضيلات</Link></div><p className="detail-note">التفضيلات المحفوظة تطبّق المدن والميزانية والعدد ونوع المجموعة والاهتمامات فقط. أنواع الإقامة وملاحظات الوصول ليست قيودًا مؤكدة في عقد التوصيات الحالي.</p>
    {error && <div role="alert" className="notice error">{error} <Link href="/login">تسجيل الدخول</Link></div>}
   </section>
   {result && result.status!=="clarification" && account.demo && <section className="card local-demo-recommendations"><h2>خيارات مشروعك في هذا المتصفح</h2><p className="detail-note">توصيات قواعد محلية للنموذج التجريبي، منفصلة عن رد الخادم. لا تمثل ذكاءً اصطناعيًا أو حفظًا في قاعدة البيانات.</p><div className="experience-grid">{localRecommendations(account.demo.listings,result.preferences,new Date()).map(({entry,recommendation})=><ActivityCard key={entry.activity.id} activity={entry.activity} recommendation={recommendation} entry={entry} party={result.preferences.party_size??1}/>)}</div></section>}
