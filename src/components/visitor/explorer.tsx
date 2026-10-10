@@ -14,6 +14,7 @@ import { jodToFils } from "@/components/business/form";
 import { ActivityCard, categoryLabels } from "./activity-card";
 import { Button, Input } from "@/components/ui";
 const samples = [
+    { name: "4 صحاب بإربد", city: "irbid", group: "friends", party: "4", budget: "70", interests: ["nature", "adventure"] as Category[], query: "إحنا 4 صحاب بإربد، معنا 70 دينار، بدنا طلعة فيها طبيعة ومغامرة." },
     { name: "طبيعة مع الأصدقاء", city: "ajloun", group: "friends", party: "4", budget: "80", interests: ["nature", "adventure"] as Category[], query: "نريد طلعة طبيعة هادئة مع وقت للتصوير." },
     { name: "فن ونكهات مع العائلة", city: "amman", group: "family", party: "4", budget: "30", interests: ["culture", "food"] as Category[], query: "نبحث عن تجربة خفيفة للعائلة تجمع الفن والنكهات." },
     { name: "غروب في الصحراء", city: "wadi-rum", group: "friends", party: "6", budget: "40", interests: ["adventure", "nature"] as Category[], query: "نريد نشاطًا جماعيًا في أجواء الصحراء." }
@@ -82,7 +83,7 @@ export default function Explorer() {
     </div>
     <fieldset className="interest-fieldset"><legend>ما الذي يشبهك؟</legend><div className="interest-options">{Object.entries(categoryLabels).map(([value, label]) => <label className={interests.includes(value as Category) ? "interest active" : "interest"} key={value}><input type="checkbox" checked={interests.includes(value as Category)} onChange={() => setInterests(current => current.includes(value as Category) ? current.filter(item => item !== value) : [...current, value as Category])}/>{label}</label>)}</div></fieldset>
     <label htmlFor="query">صِف طلعتك بكلماتك <span className="muted">(العربية أو الإنجليزية)</span></label><textarea id="query" rows={2} maxLength={1000} value={query} onChange={e => setQuery(e.target.value)} placeholder="بدي طلعة طبيعة مع صحابي بعجلون، وفيها وقت للتصوير…"/>
-    <div className="form-bottom"><p>الميزانية للنشاط فقط، دون المواصلات أو الوجبات إلا إذا ذُكرت. القيم المحددة هنا لها الأولوية على النص.</p><Button type="submit" disabled={pending}>{pending ? <LoaderCircle className="spin" size={18}/> : <Sparkles size={18} aria-hidden="true"/>}{pending ? "نبحث عن طلعتك…" : "اكتشف خياراتي"}<ArrowUpLeft size={18} aria-hidden="true"/></Button></div>
+    <div className="form-bottom"><p>الميزانية للنشاط فقط، دون المواصلات أو الوجبات إلا إذا ذُكرت.</p><Button type="submit" disabled={pending}>{pending ? <LoaderCircle className="spin" size={18}/> : <Sparkles size={18} aria-hidden="true"/>}{pending ? "نبحث عن طلعتك…" : "اكتشف خياراتي"}<ArrowUpLeft size={18} aria-hidden="true"/></Button></div>
     </fieldset>
    </form>
    <div className="sample-row"><span>جرّب مثالًا:</span>{samples.map((value, index) => <button type="button" key={value.name} onClick={() => sample(index)} disabled={pending}>{value.name}</button>)}</div>
