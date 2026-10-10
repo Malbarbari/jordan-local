@@ -1,5 +1,7 @@
 # Jordan Local team handoff
 
+Backend/account/Arabic-intent additions: [BACKEND-AI-HANDOFF.md](docs/BACKEND-AI-HANDOFF.md). These are isolated on `feat/backend-ai-accounts`; preserve the frontend redesign during integration.
+
 Current source of truth: README, docs/MVP-SETUP.md, docs/FINAL-DELIVERY.md and docs/MVP-DEMO.md. Older planning/delivery reports are historical. The final integrated build stays in the existing repo; no new dependency, paid request, database application or deployment was performed.
 
 ## Run and verify

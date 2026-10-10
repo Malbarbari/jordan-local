@@ -6,6 +6,7 @@ import { dataMode,aiEnabled } from "@/lib/runtime";
 import { recommend } from "@/lib/recommendation/service";
 import { eligibility } from "@/lib/recommendation/constraints";
 import { enrichCatalog } from "@/lib/data/catalog";
+import { requiredDiscoveryTags } from "@/lib/recommendation/discovery";
 export const runtime = "nodejs";
 const requests = new Map<string, {
     time: number;
@@ -38,7 +39,9 @@ export async function POST(request: Request) {
         if (!catalog.available) result.warnings.push("التصنيفات الإضافية غير متاحة بالكامل؛ استخدمنا بيانات القوائم الأساسية دون بيانات مزودين افتراضية.");
         if (dataMode() === "supabase" && result.recommendations.length) {
             const current = await loadActivities();
-            result.recommendations = result.recommendations.filter(row => { const fresh = current.find(a => a.id === row.activity_id); return fresh && fresh.updated_at === row.activity.updated_at && eligibility(fresh, result.preferences, new Date()) === "eligible"; });
+            const required = requiredDiscoveryTags(input.query);
+            const freshCatalog = required.length ? await enrichCatalog(current) : null;
+            result.recommendations = result.recommendations.filter(row => { const fresh = current.find(a => a.id === row.activity_id); const metadata = freshCatalog?.entries.find(entry => entry.activity.id === row.activity_id)?.metadata; return fresh && fresh.updated_at === row.activity.updated_at && eligibility(fresh, result.preferences, new Date()) === "eligible" && required.every(tag => metadata?.discovery_tags.includes(tag)); });
             if (!result.recommendations.length) {
                 result.status = "no_match";
                 result.engine = "none";

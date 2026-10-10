@@ -1,14 +1,25 @@
 import type { CatalogMetadata, DiscoveryTag } from "@/contracts/catalog";
 import { discoveryLabels } from "@/contracts/catalog";
 const patterns: Partial<Record<DiscoveryTag, RegExp>> = {
- hiking: /مسير|مشي|هايكنج|hiking|trail/i, swimming: /سباح|مسبح|مسابح|swim|pool/i,
+ hiking: /مسير|مشي|هايكن[جقغ]|hiking|trail/i, swimming: /سباح|مسبح|مسابح|swim|pool/i,
  pools: /مسبح|مسابح|pool/i, sea: /بحر|sea|beach/i, cabins: /كوخ|أكواخ|اكواخ|كابين|cabin/i,
- farms: /مزرع|مزارع|farm/i, camps: /مخيم|تخييم|camp/i, wellness: /استرخاء|ينابيع|عافية|wellness|relax/i,
+ farms: /مزرع|مزارع|farm/i, camps: /مخيم|تخييم|camp/i, wellness: /استرخاء|ينابيع|عافية|هادئ|هادي|wellness|relax/i,
  scenic: /إطلال|اطلال|مناظر|تصوير|scenic|view/i, historical: /تاريخ|آثار|اثار|قلع|histor|ruins/i,
  cultural: /ثقاف|تراث|cultur/i, local_tours: /جول|مرشد|tour/i,
+ nature: /طبيعة|nature/i, adventure: /مغامر|adventure/i, food: /طعام|أكل|اكل|food/i,
 };
 export function queryDiscoveryTags(query: string): DiscoveryTag[] {
-    return Object.entries(patterns).filter(([, pattern]) => pattern.test(query)).map(([tag]) => tag as DiscoveryTag);
+    const positive=query.replace(/(?:ما بدنا|ما بدي|بدون|لا أريد|لا اريد|without|not)\s+\S+/gi, "");
+    return Object.entries(patterns).filter(([, pattern]) => pattern.test(positive)).map(([tag]) => tag as DiscoveryTag);
+}
+// Explicit mandatory clauses and clearly requested activity types are hard filters.
+// Never infer accessibility or safety from discovery tags.
+export function requiredDiscoveryTags(query: string): DiscoveryTag[] {
+    const positive=query.replace(/(?:ما بدنا|ما بدي|بدون|لا أريد|لا اريد|without|not)\s+\S+/gi, "");
+    const clauses = positive.split(/[،,.؛!?\n]/).filter(clause => /لازم|ضروري|فقط|must|only/i.test(clause));
+    const activityTags:DiscoveryTag[]=["hiking","swimming","pools","cabins","farms","camps","sea"];
+    const explicit=/بدي|بدنا|نريد|أريد|اريد|اقترح|want|looking for/i.test(positive)?queryDiscoveryTags(positive).filter(tag=>activityTags.includes(tag)):[];
+    return [...new Set([...clauses.flatMap(queryDiscoveryTags),...explicit])];
 }
 export function discoveryMatches(query: string, metadata?: CatalogMetadata): DiscoveryTag[] {
     return metadata ? queryDiscoveryTags(query).filter(tag => metadata.discovery_tags.includes(tag)) : [];

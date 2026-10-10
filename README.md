@@ -22,9 +22,9 @@ Open http://localhost:3000. The default seed/rules mode requires no credentials 
 
 ## Setup and team continuation
 
-Read [setup and live verification](docs/MVP-SETUP.md), [team handoff](TEAM_HANDOFF.md), [three demo scenarios](docs/MVP-DEMO.md), and [final delivery report](docs/FINAL-DELIVERY.md). The [API contract](docs/API_CONTRACT.md) is frozen. The final report and handoff describe the current implementation; the original contract handoff is retained for frozen integration details.
+Read [setup and live verification](docs/MVP-SETUP.md), [team handoff](TEAM_HANDOFF.md), [backend/AI integration and new settings](docs/BACKEND-AI-HANDOFF.md), [three demo scenarios](docs/MVP-DEMO.md), and [final delivery report](docs/FINAL-DELIVERY.md). The [API contract](docs/API_CONTRACT.md) is frozen. The final report and handoff describe the current implementation; the original contract handoff is retained for frozen integration details.
 
-Supabase: review/apply migrations 001 → 002 → 003 → 004 → 005 in order, then original seeds, seed_tourism.sql, seed_details.sql and seed_marketplace.sql. seed_marketplace_demo.sql is optional for a separate demonstration database only; never import fictional companies into production. Never reset an existing database. Configure Auth Site URL and the exact /auth/callback redirect. The server uses the signed-in user's publishable-key client and RLS, never a service-role runtime key.
+Supabase: review/apply migrations 001 → 002 → 003 → 004 → 005 → 006 in order, then original seeds, seed_tourism.sql, seed_details.sql and seed_marketplace.sql. seed_marketplace_demo.sql is optional for a separate demonstration database only; never import fictional companies into production. Never reset an existing database. Configure Auth Site URL and the exact /auth/callback redirect. The server uses the signed-in user's publishable-key client and RLS, never a service-role runtime key.
 
 Environment placeholders: [.env.example](.env.example). Keep .env.local private. DATA_MODE=supabase enables persistence after setup. AI_MODE=hybrid plus ALLOW_PAID_AI=true and a server-only OpenAI key require explicit approval for paid usage. Otherwise the Responses integration uses deterministic fallback. No paid requests or Vercel deployment were performed.
 
