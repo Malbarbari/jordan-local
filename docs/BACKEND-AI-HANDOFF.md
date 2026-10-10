@@ -1,6 +1,6 @@
 # Backend / AI / dual-account handoff
 
-This branch extends the existing MVP, not a replacement application. The frozen `src/contracts/index.ts`, fixtures and `docs/API_CONTRACT.md` are unchanged. Work is isolated on `feat/backend-ai-accounts`, based on main `c70bc86`, in a sibling Git worktree. The original `feat/frontend-redesign` working tree and its uncommitted UI work are preserved. Do not merge automatically.
+This branch extends the existing MVP, not a replacement application. The frozen `src/contracts/index.ts`, fixtures and `docs/API_CONTRACT.md` are unchanged. Work is isolated on `feat/backend-ai-accounts`, based on main `c70bc86`, in a sibling Git worktree. The original `feat/frontend-redesign` working tree and its uncommitted UI work are preserved. The later final-submission instruction authorizes verified safe integration into main; the isolated implementation history below is preserved.
 
 ## Architecture and completed behavior
 
@@ -69,7 +69,7 @@ Verified locally: `npm run lint`, `npx tsc --noEmit`, `npm run build`, and **143
 
 ## Integration / delivery
 
-No main merge, deployment, paid call or database migration execution is authorized by this task. After reviewing the local feature commit:
+The final-submission request supersedes the original no-merge instruction and authorizes normal Git publication after checks. Deployment, paid calls and live SQL application were not performed. For continuing backend feature work after submission:
 
 ```powershell
 git push -u origin feat/backend-ai-accounts

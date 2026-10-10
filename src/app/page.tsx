@@ -22,7 +22,7 @@ export default function Home() {
       <section className="business-callout">
         <div>
           <span className="eyebrow">صاحب مكان أو تجربة؟</span>
-          <h2>انضم إلى Jordan Local كمشروع سياحي</h2>
+          <h2>انضم إلى Tashah كمشروع سياحي</h2>
           <p>عرّف الزوار بتجربتك، وساعدهم يلاقوا طلعة تناسبهم.</p>
         </div>
         <Link href="/business" className="button">أضف تجربتك<ArrowUpLeft size={18} aria-hidden="true" /></Link>

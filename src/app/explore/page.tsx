@@ -5,7 +5,7 @@ export default function ExplorePage() {
   return (
     <>
       <div className="page-intro explore-intro">
-        <span className="eyebrow">اكتشف / Jordan Local</span>
+        <span className="eyebrow">اكتشف / Tashah</span>
         <h1>طلعتك الجاية، أقرب مما تتخيّل.</h1>
         <p>اختَر المكان والمزاج، أو احكيلنا عن مجموعتك وميزانيتك.</p>
         <div className="sample-row">

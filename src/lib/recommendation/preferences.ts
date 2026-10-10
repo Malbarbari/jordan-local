@@ -30,7 +30,7 @@ export function parseQuery(query: string): Partial<Preferences> {
         const [whole, dec = ""] = amount[1].split(".");
         const fils = Number(whole) * 1000 + Number(dec.padEnd(3, "0"));
         parsed.budget_fils = !amount[1].startsWith("-") && dec.length <= 3 && Number.isSafeInteger(fils) && fils >= 0 && fils <= 10000000 ? fils : null;
-        parsed.budget_scope = /لكل شخص|للشخص|per person|each/i.test(q) ? "per_person" : /للمجموعة|كلنا|معنا|إجمالي|اجمالي|total|whole group|group budget/i.test(q) ? "per_group" : null;
+        parsed.budget_scope = /لكل شخص|للشخص|per person|each/i.test(q) ? "per_person" : /للمجموعة|كلنا|معنا|ميزانيتنا|إجمالي|اجمالي|total|whole group|group budget/i.test(q) ? "per_group" : null;
     }
     if (/رحلة كاملة|كل الرحلة|whole trip|transport|مواصلات/i.test(q))
         parsed.budget_basis = "whole_trip";

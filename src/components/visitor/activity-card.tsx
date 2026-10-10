@@ -6,6 +6,7 @@ import type { Activity, Recommendation } from "@/contracts";
 import { cities } from "@/lib/recommendation/preferences";
 import { defaultMetadata, discoveryLabels, kindLabels, type CatalogEntry } from "@/contracts/catalog";
 import ListingDialog from "./listing-dialog";
+import licensedImages from "../../../data/tourism.images.json";
 
 export const categoryLabels = { nature: "طبيعة", culture: "فن وثقافة", food: "طعام ونكهات", adventure: "مغامرة", heritage: "تراث" };
 
@@ -14,7 +15,8 @@ export function ActivityCard({ activity: a, recommendation: r, party = 4, entry 
   const metadata = entry?.metadata ?? defaultMetadata(a);
   const estimate = metadata.estimated_price_fils === null ? null : metadata.estimated_price_fils * (metadata.estimated_price_unit === "per_person" ? party : 1);
   const total = r ? r.total_cost_fils : a.price_unit === "per_person" && a.price_fils !== null ? a.price_fils * party : a.price_fils;
-  const art = <Image src={a.image_path && /^\/images\/(forest|desert|urban|countryside)\.svg$/.test(a.image_path) ? a.image_path : "/images/countryside.svg"} alt="رسم توضيحي عام، وليس صورة لهذا المكان" fill sizes="(max-width:640px) 100vw, (max-width:1000px) 50vw, 33vw" />;
+  const photo = Object.values(licensedImages).find(image => image.path === a.image_path);
+  const art = <Image src={photo?.path ?? (a.image_path && /^\/images\/(forest|desert|urban|countryside)\.svg$/.test(a.image_path) ? a.image_path : "/images/countryside.svg")} alt={photo ? `${photo.alt_ar} · صورة عامة للمنطقة، وليست توثيقًا لمرافق العرض` : "رسم توضيحي عام، وليس صورة لهذا المكان"} fill sizes="(max-width:640px) 100vw, (max-width:1000px) 50vw, 33vw" />;
   const price = (
     <div className="price-row">
       <div>
@@ -28,7 +30,8 @@ export function ActivityCard({ activity: a, recommendation: r, party = 4, entry 
   );
   return (
     <article className="experience-card activity-card compact-card">
-      <div className="experience-art">{art}<span className="category-pill">{categoryLabels[a.category]}</span><span className="illustration-label">رسم توضيحي{synthetic ? " · افتراضي" : ""}</span></div>
+      <div className="experience-art">{art}<span className="category-pill">{categoryLabels[a.category]}</span><span className="illustration-label">{photo ? "صورة للمنطقة" : "رسم توضيحي"}{synthetic ? " · افتراضي" : ""}</span></div>
+      {photo && <details className="image-credit"><summary>حقوق الصورة · {photo.author}</summary><p><a href={photo.source_url} target="_blank" rel="noopener noreferrer">{photo.title}</a> · <a href={photo.license_url} target="_blank" rel="noopener noreferrer">{photo.license}</a> · {photo.changes}</p></details>}
       <div className="experience-body">
         <div className="eyebrow"><MapPin size={13} aria-hidden="true" />{cities[a.location_id]}</div>
         <h3><Link href={`/listings/${a.id}`}>{a.title_ar}</Link></h3>
@@ -44,7 +47,7 @@ export function ActivityCard({ activity: a, recommendation: r, party = 4, entry 
         {price}
         <Link className="card-explore" href={`/listings/${a.id}`}>تفاصيل التجربة <ArrowUpLeft size={16} aria-hidden="true" /></Link>
         <ListingDialog title={a.title_ar} label="نظرة سريعة" className="text-link">
-          <div className="detail-hero">{art}<span className="illustration-label">رسم توضيحي عام</span></div>
+          <div className="detail-hero">{art}<span className="illustration-label">{photo ? "صورة عامة للمنطقة" : "رسم توضيحي عام"}</span></div>
           <div className="detail-body">
             <span className="eyebrow">{cities[a.location_id]} · {kindLabels[metadata.listing_kind]}</span>
             <h2>{a.title_ar}</h2>

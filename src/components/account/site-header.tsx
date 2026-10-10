@@ -10,7 +10,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <Link href="/" className="brand" onClick={() => setOpen(false)}>
         <span className="brand-symbol" aria-hidden="true">ج</span>
-        <span>جوردن لوكال<small lang="en" dir="ltr">JORDAN LOCAL</small></span>
+        <span>طشه<small lang="en" dir="ltr">TASHAH</small></span>
       </Link>
       <button type="button" className="nav-toggle" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen((value) => !value)}>
         {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}

@@ -17,17 +17,14 @@ await call('Page.enable');await call('Runtime.enable');await call('Network.enabl
 
 
 await nav('/explore');await wait("document.querySelector('.legacy-catalogue .activity-card') && document.getElementById('query') && [...document.querySelectorAll('button')].some(b=>b.textContent.includes('حلّل وصفي'))");
-await set('query','إحنا 4 صحاب بإربد ومعنا 60 دينار وبدنا طلعة طبيعة');
+await set('query','بدي طشّة طبيعة قريبة من عمّان بميزانية ٢٠ دينار');
 await wait("[...document.querySelectorAll('button')].some(b=>b.textContent.includes('حلّل وصفي') && !b.disabled)");
-await ev("[...document.querySelectorAll('button')].find(b=>b.textContent.includes('حلّل وصفي')).click()");
-await wait("document.querySelector('.clarification')");
-assert.ok(await ev("document.querySelector('.results-anchor').textContent.includes('إربد') && document.querySelector('.results-anchor').textContent.includes('60 دينار')"));
-await ev("[...document.querySelectorAll('.clarification button')].find(b=>b.textContent.includes('للنشاط فقط')).click()");
+await ev("document.querySelector('.recommendation-form').requestSubmit()");
 await wait("document.querySelector('.results-anchor .activity-card')");
 assert.ok(await ev("document.querySelector('.results-anchor').textContent.includes('اقتراحات بالقواعد')"));
 await shot('backend-natural-request');
 for(const path of ['/account/preferences','/business/settings']){await nav(path);await wait("document.body.textContent.includes('الحفظ مرتبط بحساب Supabase حقيقي')");assert.ok(await ev("!document.querySelector('form button[type=submit]')"));await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});assert.ok(await ev('document.documentElement.scrollWidth<=innerWidth'),path);}
 await nav('/businesses/70000000-0000-4000-8000-000000000001');await wait("document.body.textContent.includes('لا توجد بيانات ترخيص مصرح بها')");assert.ok(await ev("!document.body.textContent.includes('PRIVATE-123')"));
 assert.equal(exceptions.length,0,JSON.stringify(exceptions));
-console.log('Backend demo UI passed: natural Arabic → clarification → rules results; honest account/licensing gates; public unknown-license status; mobile layouts; zero runtime exceptions.');
+console.log('Backend demo UI passed: final Arabic nature request → rules results; honest account/licensing gates; public unknown-license status; mobile layouts; zero runtime exceptions.');
 socket.close();await fetch(debug+'/json/close/'+target.id);

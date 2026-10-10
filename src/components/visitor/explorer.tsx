@@ -9,18 +9,20 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowUpLeft, Sparkles, SlidersHorizontal, LoaderCircle, Users, Wallet, MapPin } from "lucide-react";
 import { RecommendRequestSchema, RecommendResponseSchema, ErrorResponseSchema, type Category, type RecommendResponse, type RecommendRequest, type Preferences } from "@/contracts";
 import { CatalogResponseSchema, kindLabels, discoveryLabels, type CatalogEntry, type DiscoveryTag } from "@/contracts/catalog";
+import { quickNatureDefaults } from "@/lib/recommendation/quick-defaults";
 import { cities } from "@/lib/recommendation/preferences";
 import { jodToFils } from "@/components/business/form";
 import { ActivityCard, categoryLabels } from "./activity-card";
 import { Button, Input } from "@/components/ui";
 const samples = [
-    { name: "4 صحاب بإربد", city: "irbid", group: "friends", party: "4", budget: "70", interests: ["nature", "adventure"] as Category[], query: "إحنا 4 صحاب بإربد، معنا 70 دينار، بدنا طلعة فيها طبيعة ومغامرة." },
+    { name: "4 صحاب بإربد", city: "irbid", group: "friends", party: "4", budget: "60", interests: ["nature", "adventure"] as Category[], query: "إحنا 4 صحاب بإربد، ميزانيتنا 60 دينار، بدنا طلعة فيها طبيعة ومغامرة." },
     { name: "طبيعة مع الأصدقاء", city: "ajloun", group: "friends", party: "4", budget: "80", interests: ["nature", "adventure"] as Category[], query: "نريد طلعة طبيعة هادئة مع وقت للتصوير." },
     { name: "فن ونكهات مع العائلة", city: "amman", group: "family", party: "4", budget: "30", interests: ["culture", "food"] as Category[], query: "نبحث عن تجربة خفيفة للعائلة تجمع الفن والنكهات." },
     { name: "غروب في الصحراء", city: "wadi-rum", group: "friends", party: "6", budget: "40", interests: ["adventure", "nature"] as Category[], query: "نريد نشاطًا جماعيًا في أجواء الصحراء." }
 ];
 export default function Explorer() {
     const account=useAccount();
+    const [useFormFields,setUseFormFields]=useState(false);
     const [catalogue, setCatalogue] = useState<CatalogEntry[]>([]), [catalogueError, setCatalogueError] = useState(""), [catalogueLoading, setCatalogueLoading] = useState(true);
     const [kind, setKind] = useState(""), [tag, setTag] = useState(""), [metadataAvailable, setMetadataAvailable] = useState(true);
     const [city, setCity] = useState("ajloun"), [group, setGroup] = useState("friends"), [party, setParty] = useState("4"), [budget, setBudget] = useState("40"), [query, setQuery] = useState(""), [interests, setInterests] = useState<Category[]>(["nature", "adventure"]);
@@ -58,11 +60,11 @@ export default function Explorer() {
         }
     }
     async function saved(){try{setError("");const p=UserPreferencesSchema.parse(await api("/api/account/preferences"));await send(RecommendRequestSchema.parse({schema_version:1,locale:"ar",query,overrides:savedPreferencesToOverrides(p)}));}catch(e){setError(e instanceof Error?e.message:"تعذّر تحميل التفضيلات.");}}
-    function submit(event: FormEvent) { event.preventDefault(); const input = { schema_version: 1, locale: "ar", query, overrides: { party_size: party === "" ? null : Number(party), budget_fils: budget === "" ? null : jodToFils(budget), budget_scope: "per_group", budget_basis: "activity_only", destination_location_ids: city ? [city] : [], group_type: group || null, interests } }; const parsed = RecommendRequestSchema.safeParse(input); if (!parsed.success) {
+    function submit(event: FormEvent) { event.preventDefault(); const input = { schema_version: 1, locale: "ar", query, overrides: query.trim() && !useFormFields ? quickNatureDefaults(query) : { party_size: party === "" ? null : Number(party), budget_fils: budget === "" ? null : jodToFils(budget), budget_scope: "per_group", budget_basis: "activity_only", destination_location_ids: city ? [city] : [], group_type: group || null, interests } }; const parsed = RecommendRequestSchema.safeParse(input); if (!parsed.success) {
         setError("راجع عدد الأشخاص (1–30) والميزانية (دينار، حتى ثلاث خانات عشرية).");
         return;
     } void send(parsed.data); }
-    function sample(index: number) { const value = samples[index]; setCity(value.city); setGroup(value.group); setParty(value.party); setBudget(value.budget); setInterests(value.interests); setQuery(value.query); setResult(null); setError(""); }
+    function sample(index: number) { setUseFormFields(true); const value = samples[index]; setCity(value.city); setGroup(value.group); setParty(value.party); setBudget(value.budget); setInterests(value.interests); setQuery(value.query); setResult(null); setError(""); }
     function clarify(key: string, value: string) {
         if (!lastRequest.current)
             return;
@@ -75,7 +77,7 @@ export default function Explorer() {
   <section className="search-section" id="discover" aria-labelledby="search-title">
    <div className="section-heading"><div><span className="eyebrow"><SlidersHorizontal size={16} aria-hidden="true"/>اقتراحات على قياسك</span><h2 id="search-title">شو بتحب؟ ومع مين طالع؟</h2></div><p>احكيلنا عن طلعتك، وشوف خيارات محسوبة لمجموعتك.</p></div>
    <form className="discovery-form recommendation-form" onSubmit={submit} noValidate>
-    <fieldset disabled={pending}><div className="search-controls">
+    <fieldset disabled={pending} onChange={e=>{if((e.target as HTMLElement).id!=="query")setUseFormFields(true);}}><div className="search-controls">
      <div><label htmlFor="city"><MapPin size={16} aria-hidden="true"/>المدينة</label><select id="city" value={city} onChange={e => setCity(e.target.value)}><option value="">كل المدن</option>{Object.entries(cities).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></div>
      <div><label htmlFor="party"><Users size={16} aria-hidden="true"/>عدد الأشخاص</label><Input id="party" type="number" min={1} max={30} step={1} value={party} onChange={e => setParty(e.target.value)}/></div>
      <div><label htmlFor="budget"><Wallet size={16} aria-hidden="true"/>ميزانية المجموعة · دينار</label><Input id="budget" inputMode="decimal" value={budget} onChange={e => setBudget(e.target.value)} placeholder="40"/></div>
@@ -83,7 +85,7 @@ export default function Explorer() {
     </div>
     <fieldset className="interest-fieldset"><legend>ما الذي يشبهك؟</legend><div className="interest-options">{Object.entries(categoryLabels).map(([value, label]) => <label className={interests.includes(value as Category) ? "interest active" : "interest"} key={value}><input type="checkbox" checked={interests.includes(value as Category)} onChange={() => setInterests(current => current.includes(value as Category) ? current.filter(item => item !== value) : [...current, value as Category])}/>{label}</label>)}</div></fieldset>
     <label htmlFor="query">صِف طلعتك بكلماتك <span className="muted">(العربية أو الإنجليزية)</span></label><textarea id="query" rows={2} maxLength={1000} value={query} onChange={e => setQuery(e.target.value)} placeholder="بدي طلعة طبيعة مع صحابي بعجلون، وفيها وقت للتصوير…"/>
-    <div className="form-bottom"><p>الميزانية للنشاط فقط، دون المواصلات أو الوجبات إلا إذا ذُكرت.</p><Button type="submit" disabled={pending}>{pending ? <LoaderCircle className="spin" size={18}/> : <Sparkles size={18} aria-hidden="true"/>}{pending ? "نبحث عن طلعتك…" : "اكتشف خياراتي"}<ArrowUpLeft size={18} aria-hidden="true"/></Button></div>
+    {Object.keys(quickNatureDefaults(query)).length>0 && !useFormFields && <p className="notice">عرض سريع: شخص واحد، والميزانية للنشاط فقط دون المواصلات. نبحث في عمّان والسلط وجرش؛ لا نحسب مسافة الطريق. غيّر حقول التخطيط لتعديل هذه الافتراضات.</p>}<div className="form-bottom"><p>نحلّل وصفك إذا لم تعدّل حقول التخطيط. الحقول المعدّلة لها الأولوية، والميزانية للنشاط فقط.</p><Button type="submit" disabled={pending}>{pending ? <LoaderCircle className="spin" size={18}/> : <Sparkles size={18} aria-hidden="true"/>}{pending ? "نبحث عن طلعتك…" : "اكتشف خياراتي"}<ArrowUpLeft size={18} aria-hidden="true"/></Button></div>
     </fieldset>
    </form>
    <div className="sample-row"><span>جرّب مثالًا:</span>{samples.map((value, index) => <button type="button" key={value.name} onClick={() => sample(index)} disabled={pending}>{value.name}</button>)}</div>

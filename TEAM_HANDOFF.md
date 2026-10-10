@@ -1,6 +1,6 @@
 # Jordan Local team handoff
 
-Backend/account/Arabic-intent additions: [BACKEND-AI-HANDOFF.md](docs/BACKEND-AI-HANDOFF.md). These are isolated on `feat/backend-ai-accounts`; preserve the frontend redesign during integration.
+Backend/account/Arabic-intent additions: [BACKEND-AI-HANDOFF.md](docs/BACKEND-AI-HANDOFF.md). Final submission integrates `feat/backend-ai-accounts` and the preserved `feat/frontend-redesign`. The integration worktree is `jordan-local-submission`; the frozen contract is unchanged. See root README and DEMO_GUIDE for current judge setup.
 
 Current source of truth: README, docs/MVP-SETUP.md, docs/FINAL-DELIVERY.md and docs/MVP-DEMO.md. Older planning/delivery reports are historical. The final integrated build stays in the existing repo; no new dependency, paid request, database application or deployment was performed.
 

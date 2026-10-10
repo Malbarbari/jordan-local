@@ -52,7 +52,8 @@ await call("Emulation.setDeviceMetricsOverride", { width: 1440, height: 1000, de
 await call("Page.navigate", { url: origin });
 await wait("document.querySelectorAll('.catalogue-section .experience-card').length === 6");
 assert.equal(await evaluate("document.documentElement.dir"), "rtl");
-await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 6");
+await call("Page.navigate", {url: `${origin}/explore`});
+await wait("document.querySelectorAll('.tourism-section .tourism-card').length === 9");
 await evaluate("document.querySelector('.legacy-catalogue').open=true; document.querySelector('.advanced-filters').open=true");
 await call("Page.bringToFront");
 await evaluate("document.querySelector('.tourism-section .experience-grid').scrollIntoView({behavior:'instant',block:'start'})");
@@ -84,6 +85,7 @@ await wait("document.querySelectorAll('.catalogue-section .experience-card').len
 assert.ok(await evaluate("document.querySelector('.catalogue-section .experience-card').textContent.includes('مسبح')"));
 await set("catalog-kind", ""); await set("catalog-tag", "");
 console.log("PASS tourism: public ownership/source links, type/tag filters, pool and unconfirmed cabin estimate");
+await set("city","irbid"); await set("city","ajloun");
 await evaluate("document.querySelector('.recommendation-form').requestSubmit()");
 await wait("document.querySelectorAll('.results-anchor .experience-card').length > 0");
 assert.ok(await evaluate("document.querySelector('.result-notes').textContent.includes('القواعد')"));

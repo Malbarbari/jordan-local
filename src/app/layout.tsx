@@ -7,7 +7,7 @@ import SiteHeader from "@/components/account/site-header";
 import { dataMode, hasSupabase } from "@/lib/runtime";
 
 export const metadata: Metadata = {
-  title: "Jordan Local | الأردن من زاوية أقرب",
+  title: "Tashah | الأردن من زاوية أقرب",
   description: "اكتشف وجهات الأردن وتجارب أهله، وخطّط طلعتك بحسب اهتماماتك وميزانية مجموعتك.",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="shell" id="main-content">{children}</main>
           <footer className="shell site-footer">
             <div>
-              <strong>Jordan Local · الأردن من زاوية أقرب.</strong>
+              <strong>Tashah · الأردن من زاوية أقرب.</strong>
               <p>أماكن تستاهل الزيارة، وتجارب محلية تستاهل تنعرف.</p>
             </div>
             <div className="footer-links">
